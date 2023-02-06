@@ -9,6 +9,14 @@ public class PlayerMovement : MonoBehaviour
     private float velocity;
     public float gravityMultiplier = 3.0f;
 
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+
+    public int attackDamage = 40;
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+
     CharacterController ch;
     // Start is called before the first frame update
     void Start()
@@ -34,7 +42,33 @@ public class PlayerMovement : MonoBehaviour
 
         ch.Move(new Vector3(x, velocity, z));
 
+        if (Time.time >= nextAttackTime)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
+        }
+
     }
 
+    void Attack()
+    {
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+    
+        foreach(Collider enemy in hitEnemies)
+        {
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            enemy.GetComponent<Enemy>().Knockback(this.gameObject);
+        }
+    
+    }
 
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
 }
