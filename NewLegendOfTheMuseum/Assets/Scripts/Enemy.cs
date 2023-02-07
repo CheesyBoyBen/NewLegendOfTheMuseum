@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    public int damage;
     public int maxHealth = 100;
     int currentHealth;
 
@@ -14,11 +14,15 @@ public class Enemy : MonoBehaviour
     Rigidbody rb;
     Vector3 dir;
 
+    public PlayerMovement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody>();
+
+
     }
 
     private void Update()
@@ -30,6 +34,15 @@ public class Enemy : MonoBehaviour
         else
         {
             knockbackTime -= Time.deltaTime;
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerMovement.TakeDamage(damage, this.gameObject);
         }
     }
 
@@ -57,4 +70,6 @@ public class Enemy : MonoBehaviour
 
         knockbackTime = 2.0f;
     }
+
+
 }
