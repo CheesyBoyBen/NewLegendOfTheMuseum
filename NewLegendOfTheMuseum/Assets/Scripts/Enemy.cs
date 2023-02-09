@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
         dir = (transform.position - player.transform.position);
         dir.y = 2.0f;
 
-        rb.AddForce(dir * knockbackForce);
+        rb.AddForce(dir * knockbackForce, ForceMode.Impulse);
 
         knockbackTime = 2.0f;
     }
