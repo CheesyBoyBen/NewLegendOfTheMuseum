@@ -16,6 +16,11 @@ public class Enemy : MonoBehaviour
 
     public PlayerMovement playerMovement;
 
+    public GameObject player;
+    public float speed;
+
+    private float distance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +34,10 @@ public class Enemy : MonoBehaviour
     {
         if (knockbackTime <= 0)
         {
+            distance = Vector3.Distance(transform.position, player.transform.position);
+            Vector3 direction = player.transform.position - transform.position;
 
+            transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
         }
         else
         {

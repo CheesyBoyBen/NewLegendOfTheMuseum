@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c86bb3df2fc7a14ba27fe1f35dd374f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 0
   moveSpeed: 10
   gravityMultiplier: 1
   attackPoint: {fileID: 109892920}
@@ -490,7 +490,7 @@ MonoBehaviour:
     m_Bits: 64
   attackDamage: 1
   attackRate: 2
-  knockbackForce: 200
+  knockbackForce: 0
   knockbackTime: 0
 --- !u!136 &1507830483
 CapsuleCollider:
@@ -631,9 +631,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2377445496034416392, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377445496034416392, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
       propertyPath: damage
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2377445496034416392, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1507830476}
     - target: {fileID: 2377445496034416392, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
       propertyPath: playerMovement
       value: 
