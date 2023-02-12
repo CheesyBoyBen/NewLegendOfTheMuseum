@@ -20,10 +20,14 @@ MonoBehaviour:
     height: 997
   m_ShowMode: 4
   m_Title: Game
+    width: 2560
+    height: 1357.3334
+  m_ShowMode: 4
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -414,8 +418,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 081c0000
+    m_LastClickedInstanceID: 7176
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -469,6 +473,8 @@ MonoBehaviour:
     y: 73
     width: 388
     height: 926
+    width: 517.6666
+    height: 1286.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -963,7 +969,7 @@ MonoBehaviour:
     x: 8
     y: 718
     width: 1366
-    height: 308
+    height: 308-
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
