@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int maxHealth;
-    private int currentHealth;
+    public float maxHealth;
+    public float currentHealth;
+    public Image healthBar;
+
 
     public float moveSpeed;
     private float gravity = -9.81f;
@@ -76,6 +79,16 @@ public class PlayerMovement : MonoBehaviour
             knockbackTime -= Time.deltaTime;
         }
 
+        if (currentHealth < maxHealth)
+        {
+            currentHealth += Time.deltaTime;
+
+            if (currentHealth > maxHealth) { currentHealth = maxHealth; }
+
+            healthBar.fillAmount = currentHealth / maxHealth;
+
+        }
+
     }
 
     void Attack()
@@ -100,6 +113,8 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamage(int damage, GameObject enemy)
     {
         currentHealth -= damage;
+        healthBar.fillAmount = currentHealth / maxHealth;
+
 
         if (currentHealth <= 0)
         {

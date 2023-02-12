@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public int damage;
-    public int maxHealth = 100;
-    int currentHealth;
+    public float maxHealth;
+    public float currentHealth;
+
+    public Image healthBar;
 
     public float knockbackForce;
     public float knockbackTime;
@@ -58,7 +61,10 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if(currentHealth <= 0)
+        healthBar.fillAmount = currentHealth / maxHealth;
+
+
+        if (currentHealth <= 0)
         {
             Die();
         }
