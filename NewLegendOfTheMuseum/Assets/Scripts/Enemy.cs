@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public int damage;
+    public float maxHealth;
+    public float currentHealth;
 
-    public int maxHealth = 100;
-    int currentHealth;
+    public Image healthBar;
 
     public float knockbackForce;
     public float knockbackTime;
@@ -14,22 +17,43 @@ public class Enemy : MonoBehaviour
     Rigidbody rb;
     Vector3 dir;
 
+    public PlayerMovement playerMovement;
+
+    public GameObject player;
+    public float speed;
+
+    private float distance;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody>();
+
+
     }
 
     private void Update()
     {
         if (knockbackTime <= 0)
         {
+            distance = Vector3.Distance(transform.position, player.transform.position);
+            Vector3 direction = player.transform.position - transform.position;
 
+            transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
         }
         else
         {
             knockbackTime -= Time.deltaTime;
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerMovement.TakeDamage(damage, this.gameObject);
         }
     }
 
@@ -37,7 +61,10 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if(currentHealth <= 0)
+        healthBar.fillAmount = currentHealth / maxHealth;
+
+
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -57,4 +84,6 @@ public class Enemy : MonoBehaviour
 
         knockbackTime = 2.0f;
     }
+
+
 }

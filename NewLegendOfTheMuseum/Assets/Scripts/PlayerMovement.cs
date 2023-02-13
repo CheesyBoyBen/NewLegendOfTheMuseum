@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float maxHealth;
+    public float currentHealth;
+    public Image healthBar;
+
+
     public float moveSpeed;
     private float gravity = -9.81f;
     private float velocity;
@@ -18,10 +24,22 @@ public class PlayerMovement : MonoBehaviour
     float nextAttackTime = 0f;
 
     CharacterController ch;
+
+    public float knockbackForce;
+    public float knockbackTime;
+
+    Rigidbody rb;
+    Vector3 dir;
     // Start is called before the first frame update
     void Start()
     {
         ch = GetComponent<CharacterController>();
+        currentHealth = maxHealth;
+
+        rb = GetComponent<Rigidbody>();
+
+
+
     }
 
     // Update is called once per frame
@@ -29,26 +47,46 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
-        
-        if (ch.isGrounded)
+
+        if (knockbackTime <= 0)
         {
-            velocity = -1.0f;
+            ch.enabled = true;
+
+
+            if (ch.isGrounded)
+            {
+                velocity = -1.0f;
+            }
+            else
+            {
+                velocity += gravity * gravityMultiplier * Time.deltaTime;
+            }
+
+
+            ch.Move(new Vector3(x, velocity, z));
+
+            if (Time.time >= nextAttackTime)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Attack();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
+            }
         }
         else
         {
-            velocity += gravity * gravityMultiplier * Time.deltaTime;
+            knockbackTime -= Time.deltaTime;
         }
 
-
-        ch.Move(new Vector3(x, velocity, z));
-
-        if (Time.time >= nextAttackTime)
+        if (currentHealth < maxHealth)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
-            }
+            currentHealth += Time.deltaTime;
+
+            if (currentHealth > maxHealth) { currentHealth = maxHealth; }
+
+            healthBar.fillAmount = currentHealth / maxHealth;
+
         }
 
     }
@@ -71,4 +109,35 @@ public class PlayerMovement : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+    public void TakeDamage(int damage, GameObject enemy)
+    {
+        currentHealth -= damage;
+        healthBar.fillAmount = currentHealth / maxHealth;
+
+
+        if (currentHealth <= 0)
+        {
+            Debug.Log("Player died!");
+        }
+
+        Knockback(enemy);
+
+    }
+
+    public void Knockback(GameObject enemy)
+    {
+        ch.enabled = false;
+
+        dir = (transform.position - enemy.transform.position);
+        dir.y = 2.0f;
+
+        rb.AddForce(dir * knockbackForce);
+        knockbackTime = 0.5f;
+        Debug.Log("Player knockback");
+
+      
+
+    }
+
 }
