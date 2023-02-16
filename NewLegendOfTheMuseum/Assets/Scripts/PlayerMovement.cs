@@ -110,7 +110,6 @@ public class PlayerMovement : MonoBehaviour, Interactable
         var collision = Physics.OverlapSphere(interactPoint.position, interactRange, NPCLayers);
             foreach (Collider NPC in collision)
             {
-                print(NPC.name);
                 NPC.gameObject.GetComponent<Interactable>()?.Interact();
             }
         
