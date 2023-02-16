@@ -30,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
     Vector3 dir;
+
+    public AudioClip attackAudio;
+    public AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +104,8 @@ public class PlayerMovement : MonoBehaviour
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
             enemy.GetComponent<Enemy>().Knockback(this.gameObject);
         }
+
+        audioManager.PlayAudio(attackAudio);
     
     }
 
