@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, Interactable
 {
     public float maxHealth;
     public float currentHealth;
     public Image healthBar;
+
+    public GameObject c;
+
+    public Collider cl;
 
 
     public float moveSpeed;
@@ -16,8 +20,13 @@ public class PlayerMovement : MonoBehaviour
     public float gravityMultiplier = 3.0f;
 
     public Transform attackPoint;
+    public Transform interactPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+
+    public float interactRange = 3f;
+
+    public LayerMask NPCLayers;
 
     public int attackDamage = 40;
     public float attackRate = 2f;
@@ -43,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void HandleUpdate()
     {
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
@@ -89,7 +98,24 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Interact();
+        }
     }
+
+   public void Interact()
+    {
+        var collision = Physics.OverlapSphere(interactPoint.position, interactRange, NPCLayers);
+            foreach (Collider NPC in collision)
+            {
+                print(NPC.name);
+                NPC.gameObject.GetComponent<Interactable>()?.Interact();
+            }
+        
+    }
+
 
     void Attack()
     {
