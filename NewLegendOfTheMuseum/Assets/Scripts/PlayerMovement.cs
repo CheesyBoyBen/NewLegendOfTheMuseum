@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public float knockbackTime;
 
     Rigidbody rb;
-    Vector3 dir;
+    Vector3 knockbackVelocity;
 
     public AudioClip attackAudio;
     public AudioManager audioManager;
@@ -50,9 +50,6 @@ public class PlayerMovement : MonoBehaviour, Interactable
         currentHealth = maxHealth;
 
         rb = GetComponent<Rigidbody>();
-
-
-
     }
 
     // Update is called once per frame
@@ -63,7 +60,6 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
         if (knockbackTime <= 0)
         {
-            ch.enabled = true;
 
 
             if (ch.isGrounded)
@@ -90,6 +86,11 @@ public class PlayerMovement : MonoBehaviour, Interactable
         else
         {
             knockbackTime -= Time.deltaTime;
+
+            ch.Move(knockbackVelocity * knockbackForce);
+
+            if (knockbackForce < 0) { knockbackForce = 0; knockbackTime = 0; }
+            else { knockbackForce -= Time.deltaTime / 10; }
         }
 
         if (currentHealth < maxHealth)
@@ -158,12 +159,10 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     public void Knockback(GameObject enemy)
     {
-        ch.enabled = false;
+        knockbackForce = 0.03f;
+        knockbackVelocity = (transform.position - enemy.transform.position);
+        knockbackVelocity.y = 0f;
 
-        dir = (transform.position - enemy.transform.position);
-        dir.y = 2.0f;
-
-        rb.AddForce(dir * knockbackForce);
         knockbackTime = 0.5f;
         Debug.Log("Player knockback");
 

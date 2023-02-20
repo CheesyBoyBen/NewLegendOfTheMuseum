@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
         {
             if(state == GameState.Dialog)
             state = GameState.FreeRoam;
+
         };
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource audio;
+    public AudioSource audioSource;
     public AudioClip startClip;
 
 
@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudio(AudioClip newAudio)
     {
-        audio.clip = newAudio;
-        audio.Play();
+        audioSource.clip = newAudio;
+        audioSource.Play();
     }
 }
