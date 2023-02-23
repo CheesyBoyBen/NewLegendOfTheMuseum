@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84ebc3deb6ecc24abb9ddd484397c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 227709963}
+  audioSource: {fileID: 0}
   startClip: {fileID: 8300000, guid: 5ae4d298ed547ba4c88587effb75d7e1, type: 3}
 --- !u!4 &227709962
 Transform:
@@ -760,8 +760,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - hi
-    - helo
+    - Have you seen our animal world?
+    - Its next on the left
 --- !u!54 &540055166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1379,7 +1379,7 @@ RectTransform:
   m_GameObject: {fileID: 1270635999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.008125, y: 1.5375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 524952673}
@@ -1388,7 +1388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 61}
+  m_AnchoredPosition: {x: 0, y: 124}
   m_SizeDelta: {x: 675, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270636001
@@ -1984,6 +1984,10 @@ PrefabInstance:
     - target: {fileID: 2377445496034416396, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377445496034416396, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2377445496034416397, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
       propertyPath: m_Radius
