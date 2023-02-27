@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, Interactable
 {
     public float maxHealth;
     public float currentHealth;
     public Image healthBar;
+
+    public GameObject c;
+
+    public Collider cl;
 
 
     public float moveSpeed;
@@ -16,8 +20,13 @@ public class PlayerMovement : MonoBehaviour
     public float gravityMultiplier = 3.0f;
 
     public Transform attackPoint;
+    public Transform interactPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+
+    public float interactRange = 3f;
+
+    public LayerMask NPCLayers;
 
     public int attackDamage = 40;
     public float attackRate = 2f;
@@ -29,7 +38,11 @@ public class PlayerMovement : MonoBehaviour
     public float knockbackTime;
 
     Rigidbody rb;
-    Vector3 dir;
+    Vector3 knockbackVelocity;
+
+    public AudioClip attackAudio;
+    public AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,20 +50,16 @@ public class PlayerMovement : MonoBehaviour
         currentHealth = maxHealth;
 
         rb = GetComponent<Rigidbody>();
-
-
-
     }
 
     // Update is called once per frame
-    void Update()
+    public void HandleUpdate()
     {
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
         if (knockbackTime <= 0)
         {
-            ch.enabled = true;
 
 
             if (ch.isGrounded)
@@ -77,6 +86,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             knockbackTime -= Time.deltaTime;
+
+            ch.Move(knockbackVelocity * knockbackForce);
+
+            if (knockbackForce < 0) { knockbackForce = 0; knockbackTime = 0; }
+            else { knockbackForce -= Time.deltaTime / 10; }
         }
 
         if (currentHealth < maxHealth)
@@ -89,7 +103,23 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Interact();
+        }
     }
+
+   public void Interact()
+    {
+        var collision = Physics.OverlapSphere(interactPoint.position, interactRange, NPCLayers);
+            foreach (Collider NPC in collision)
+            {
+                NPC.gameObject.GetComponent<Interactable>()?.Interact();
+            }
+        
+    }
+
 
     void Attack()
     {
@@ -100,6 +130,8 @@ public class PlayerMovement : MonoBehaviour
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
             enemy.GetComponent<Enemy>().Knockback(this.gameObject);
         }
+
+        audioManager.PlayAudio(attackAudio);
     
     }
 
@@ -127,12 +159,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void Knockback(GameObject enemy)
     {
-        ch.enabled = false;
+        knockbackForce = 0.03f;
+        knockbackVelocity = (transform.position - enemy.transform.position);
+        knockbackVelocity.y = 0f;
 
-        dir = (transform.position - enemy.transform.position);
-        dir.y = 2.0f;
-
-        rb.AddForce(dir * knockbackForce);
         knockbackTime = 0.5f;
         Debug.Log("Player knockback");
 
