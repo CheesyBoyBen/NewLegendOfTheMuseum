@@ -55,6 +55,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
     // Update is called once per frame
     public void HandleUpdate()
     {
+        Debug.Log("test");
+
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
