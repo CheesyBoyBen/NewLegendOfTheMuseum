@@ -9,9 +9,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public float currentHealth;
     public Image healthBar;
 
-    public GameObject c;
 
-    public Collider cl;
 
 
     public float moveSpeed;
@@ -55,7 +53,6 @@ public class PlayerMovement : MonoBehaviour, Interactable
     // Update is called once per frame
     public void HandleUpdate()
     {
-        Debug.Log("test");
 
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
@@ -87,6 +84,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
         }
         else
         {
+
+            
             knockbackTime -= Time.deltaTime;
 
             ch.Move(knockbackVelocity * knockbackForce);
@@ -146,6 +145,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     public void TakeDamage(int damage, GameObject enemy)
     {
+
+
         currentHealth -= damage;
         healthBar.fillAmount = currentHealth / maxHealth;
 
@@ -161,12 +162,14 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     public void Knockback(GameObject enemy)
     {
-        knockbackForce = 0.03f;
+        Debug.Log("test");
+
+
+        knockbackForce = 0.05f;
         knockbackVelocity = (transform.position - enemy.transform.position);
         knockbackVelocity.y = 0f;
 
         knockbackTime = 0.5f;
-        Debug.Log("Player knockback");
 
       
 

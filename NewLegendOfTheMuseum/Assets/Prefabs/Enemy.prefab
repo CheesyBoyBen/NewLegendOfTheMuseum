@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2377445496034416394}
   - component: {fileID: 2377445496034416397}
   - component: {fileID: 2377445496034416392}
-  - component: {fileID: 2377445496034416393}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -61,25 +60,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24198e54bf41344f856992101f6b287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   maxHealth: 5
+  currentHealth: 0
+  healthBar: {fileID: 0}
   knockbackForce: 100
   knockbackTime: 0
---- !u!54 &2377445496034416393
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2377445496034416396}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  playerMovement: {fileID: 0}
+  player: {fileID: 0}
+  speed: 0
 --- !u!1 &2377445496686657467
 GameObject:
   m_ObjectHideFlags: 0
