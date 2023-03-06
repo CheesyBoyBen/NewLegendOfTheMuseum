@@ -9,9 +9,10 @@ public class PlayerMovement : MonoBehaviour, Interactable
     [Header("Dash")]
     public float dashSpeed;
     public float dashTime;
+    public KeyCode dashKey = KeyCode.E;
 
 
-
+    [Header("Health")]
     public float maxHealth;
     public float currentHealth;
     public Image healthBar;
@@ -20,33 +21,36 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
 
 
-
+    [Header("Move")]
     public float moveSpeed;
     private float gravity = -9.81f;
     private float velocity;
     public float gravityMultiplier = 3.0f;
-
+    [Header("Attack")]
     public Transform attackPoint;
     public Transform interactPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
-    public float interactRange = 3f;
+   
 
     public LayerMask NPCLayers;
 
     public int attackDamage = 40;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+    [Header("Interact")]
+    public float interactRange = 3f;
 
     public CharacterController ch;
-
+    [Header("Knockback")]
     public float knockbackForce;
     public float knockbackTime;
 
     Rigidbody rb;
     Vector3 knockbackVelocity;
 
+    [Header("Audio")]
     public AudioClip attackAudio;
     public AudioManager audioManager;
 
@@ -119,7 +123,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
             Interact();
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(dashKey))
         {
             StartCoroutine(Dash());
         }
