@@ -5,9 +5,18 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour, Interactable
 {
+
+    [Header("Dash")]
+    public float dashSpeed;
+    public float dashTime;
+
+
+
     public float maxHealth;
     public float currentHealth;
     public Image healthBar;
+
+
 
 
 
@@ -30,7 +39,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
-    CharacterController ch;
+    public CharacterController ch;
 
     public float knockbackForce;
     public float knockbackTime;
@@ -109,9 +118,27 @@ public class PlayerMovement : MonoBehaviour, Interactable
         {
             Interact();
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartCoroutine(Dash());
+        }
     }
 
-   public void Interact()
+    IEnumerator Dash()
+    {
+        float startTime = Time.time;
+        float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
+        float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
+
+        while (Time.time < startTime + dashTime)
+        {
+            ch.Move(new Vector3(x, velocity, z) * dashSpeed * Time.deltaTime);
+
+            yield return null;
+        }
+    }
+    public void Interact()
     {
         var collision = Physics.OverlapSphere(interactPoint.position, interactRange, NPCLayers);
             foreach (Collider NPC in collision)
