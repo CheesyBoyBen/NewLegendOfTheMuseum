@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     [Header("Interact")]
     public float interactRange = 3f;
 
-    public CharacterController ch;
+     CharacterController ch;
     [Header("Knockback")]
     public float knockbackForce;
     public float knockbackTime;
