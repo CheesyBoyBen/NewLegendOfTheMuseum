@@ -49,6 +49,11 @@ public class Enemy : MonoBehaviour
         if (pushTime >= 0)
         {
             pushTime -= Time.deltaTime;
+
+            ch.Move(pushVelocity * pushForce);
+
+            if (pushForce < 0) { pushForce = 0; }
+            else { pushForce -= Time.deltaTime / 10; }
         }
         else if (knockbackTime <= 0)
         {
@@ -110,11 +115,10 @@ public class Enemy : MonoBehaviour
     public void Push(GameObject player)
     {
 
-        pushForce = 0.03f;
+        pushForce = 0.05f;
         pushVelocity = (transform.position - player.transform.position);
         pushVelocity.y = 0f;
 
-        ch.Move(pushVelocity * pushForce);
 
         pushTime = 1f;
     }
