@@ -17,6 +17,10 @@ public class Enemy : MonoBehaviour
     public float knockbackTime;
     Vector3 knockbackVelocity;
 
+    public float pushForce;
+    public float pushTime;
+    Vector3 pushVelocity;
+
     CharacterController ch;
 
     Rigidbody rb;
@@ -42,7 +46,11 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (knockbackTime <= 0)
+        if (pushTime >= 0)
+        {
+            pushTime -= Time.deltaTime;
+        }
+        else if (knockbackTime <= 0)
         {
             distance = Vector3.Distance(transform.position, player.transform.position);
             Vector3 direction = player.transform.position - transform.position;
@@ -57,11 +65,6 @@ public class Enemy : MonoBehaviour
                     playerMovement.TakeDamage(damage, this.gameObject);
                 }
             }
-
-
-
-
-
         }
         else
         {
@@ -102,6 +105,18 @@ public class Enemy : MonoBehaviour
         knockbackVelocity.y = 0f;
 
         knockbackTime = 1f;
+    }
+
+    public void Push(GameObject player)
+    {
+
+        pushForce = 0.03f;
+        pushVelocity = (transform.position - player.transform.position);
+        pushVelocity.y = 0f;
+
+        ch.Move(pushVelocity * pushForce);
+
+        pushTime = 1f;
     }
 
 

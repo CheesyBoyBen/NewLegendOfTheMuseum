@@ -11,6 +11,12 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public float dashTime;
     public KeyCode dashKey = KeyCode.E;
 
+    [Header("Push")]
+    public KeyCode pushKey = KeyCode.Q;
+    public float pushRange = 10f;
+    public float pushCooldown = 3f;
+
+
 
     [Header("Health")]
     public float maxHealth;
@@ -127,6 +133,13 @@ public class PlayerMovement : MonoBehaviour, Interactable
         {
             StartCoroutine(Dash());
         }
+        if ((Input.GetKey(pushKey)) && (pushCooldown <= 0))
+        {
+            push();
+            //pushCooldown = 3f;
+        }
+
+        pushCooldown -= Time.deltaTime;
     }
 
     IEnumerator Dash()
@@ -140,6 +153,15 @@ public class PlayerMovement : MonoBehaviour, Interactable
             ch.Move(new Vector3(x, velocity, z) * dashSpeed * Time.deltaTime);
 
             yield return null;
+        }
+    }
+    public void push()
+    {
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, pushRange, enemyLayers);
+
+        foreach (Collider enemy in hitEnemies)
+        {
+            enemy.GetComponent<Enemy>().Push(this.gameObject);
         }
     }
     public void Interact()
