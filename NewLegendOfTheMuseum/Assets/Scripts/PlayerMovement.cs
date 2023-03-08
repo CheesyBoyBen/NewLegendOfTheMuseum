@@ -16,8 +16,6 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public float pushRange = 10f;
     private float pushCooldown = 0f;
     public float pushCooldownMax = 3f;
-    private float pushTime = 0f;
-    public float pushTimeMax = 2f;
 
 
     [Header("Health")]
@@ -39,6 +37,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public Transform interactPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+    public LayerMask pushLayers;
 
    
 
@@ -168,6 +167,13 @@ public class PlayerMovement : MonoBehaviour, Interactable
         foreach (Collider enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().Push(this.gameObject);
+        }
+
+        Collider[] hitPushable = Physics.OverlapSphere(attackPoint.position, pushRange, pushLayers);
+
+        foreach (Collider pushable in hitPushable)
+        {
+            pushable.GetComponent<PushableScript>().Push(this.gameObject);
         }
     }
     public void Interact()
