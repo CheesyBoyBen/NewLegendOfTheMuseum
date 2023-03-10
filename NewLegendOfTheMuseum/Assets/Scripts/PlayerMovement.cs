@@ -5,41 +5,59 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour, Interactable
 {
+
+    [Header("Dash")]
+    public float dashSpeed;
+    public float dashTime;
+    public KeyCode dashKey = KeyCode.E;
+
+    [Header("Push")]
+    public KeyCode pushKey = KeyCode.Q;
+    public float pushRange = 10f;
+    private float pushCooldown = 0f;
+    public float pushCooldownMax = 3f;
+
+
+    [Header("Health")]
     public float maxHealth;
     public float currentHealth;
     public Image healthBar;
 
-    public GameObject c;
-
-    public Collider cl;
 
 
+
+
+    [Header("Move")]
     public float moveSpeed;
     private float gravity = -9.81f;
     private float velocity;
     public float gravityMultiplier = 3.0f;
-
+    [Header("Attack")]
     public Transform attackPoint;
     public Transform interactPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+    public LayerMask pushLayers;
 
-    public float interactRange = 3f;
+   
 
     public LayerMask NPCLayers;
 
     public int attackDamage = 40;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+    [Header("Interact")]
+    public float interactRange = 3f;
 
-    CharacterController ch;
-
+     CharacterController ch;
+    [Header("Knockback")]
     public float knockbackForce;
     public float knockbackTime;
 
     Rigidbody rb;
     Vector3 knockbackVelocity;
 
+    [Header("Audio")]
     public AudioClip attackAudio;
     public AudioManager audioManager;
 
@@ -55,6 +73,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     // Update is called once per frame
     public void HandleUpdate()
     {
+
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
@@ -85,6 +104,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
         }
         else
         {
+
+            
             knockbackTime -= Time.deltaTime;
 
             ch.Move(knockbackVelocity * knockbackForce);
@@ -108,9 +129,54 @@ public class PlayerMovement : MonoBehaviour, Interactable
         {
             Interact();
         }
+
+        if (Input.GetKeyDown(dashKey))
+        {
+            StartCoroutine(Dash());
+        }
+        if ((Input.GetKey(pushKey)) && (pushCooldown <= 0))
+        {
+            push();
+            pushCooldown = pushCooldownMax;
+        }
+        else
+        {
+            pushCooldown -= Time.deltaTime;
+        }
+
+
     }
 
-   public void Interact()
+    IEnumerator Dash()
+    {
+        float startTime = Time.time;
+        float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
+        float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
+
+        while (Time.time < startTime + dashTime)
+        {
+            ch.Move(new Vector3(x, velocity, z) * dashSpeed * Time.deltaTime);
+
+            yield return null;
+        }
+    }
+    public void push()
+    {
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, pushRange, enemyLayers);
+
+        foreach (Collider enemy in hitEnemies)
+        {
+            enemy.GetComponent<Enemy>().Push(this.gameObject);
+        }
+
+        Collider[] hitPushable = Physics.OverlapSphere(attackPoint.position, pushRange, pushLayers);
+
+        foreach (Collider pushable in hitPushable)
+        {
+            pushable.GetComponent<PushableScript>().Push(this.gameObject);
+        }
+    }
+    public void Interact()
     {
         var collision = Physics.OverlapSphere(interactPoint.position, interactRange, NPCLayers);
             foreach (Collider NPC in collision)
@@ -144,6 +210,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     public void TakeDamage(int damage, GameObject enemy)
     {
+
+
         currentHealth -= damage;
         healthBar.fillAmount = currentHealth / maxHealth;
 
@@ -159,12 +227,14 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     public void Knockback(GameObject enemy)
     {
-        knockbackForce = 0.03f;
+        Debug.Log("test");
+
+
+        knockbackForce = 0.05f;
         knockbackVelocity = (transform.position - enemy.transform.position);
         knockbackVelocity.y = 0f;
 
         knockbackTime = 0.5f;
-        Debug.Log("Player knockback");
 
       
 

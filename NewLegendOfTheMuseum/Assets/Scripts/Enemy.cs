@@ -11,8 +11,17 @@ public class Enemy : MonoBehaviour
 
     public Image healthBar;
 
+    public LayerMask playerLayers;
+
     public float knockbackForce;
     public float knockbackTime;
+    Vector3 knockbackVelocity;
+
+    public float pushForce;
+    public float pushTime;
+    Vector3 pushVelocity;
+
+    CharacterController ch;
 
     Rigidbody rb;
     Vector3 dir;
@@ -27,6 +36,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ch = GetComponent<CharacterController>();
+
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody>();
 
@@ -35,27 +46,43 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (knockbackTime <= 0)
+        if (pushTime >= 0)
+        {
+            pushTime -= Time.deltaTime;
+
+            ch.Move(pushVelocity * pushForce);
+
+            if (pushForce < 0) { pushForce = 0; }
+            else { pushForce -= Time.deltaTime / 10; }
+        }
+        else if (knockbackTime <= 0)
         {
             distance = Vector3.Distance(transform.position, player.transform.position);
             Vector3 direction = player.transform.position - transform.position;
 
             transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+
+
+            if (Vector3.Distance(transform.position, player.transform.position) < 1f)
+            {
+                if (playerMovement.knockbackTime <= 0)
+                {
+                    playerMovement.TakeDamage(damage, this.gameObject);
+                }
+            }
         }
         else
         {
             knockbackTime -= Time.deltaTime;
+
+            ch.Move(knockbackVelocity * knockbackForce);
+
+            if (knockbackForce < 0) { knockbackForce = 0; }
+            else { knockbackForce -= Time.deltaTime / 10; }
         }
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            playerMovement.TakeDamage(damage, this.gameObject);
-        }
-    }
 
     public void TakeDamage(int damage)
     {
@@ -77,12 +104,23 @@ public class Enemy : MonoBehaviour
 
     public void Knockback(GameObject player)
     {
-        dir = (transform.position - player.transform.position);
-        dir.y = 2.0f;
 
-        rb.AddForce(dir * knockbackForce, ForceMode.Impulse);
+        knockbackForce = 0.03f;
+        knockbackVelocity = (transform.position - player.transform.position);
+        knockbackVelocity.y = 0f;
 
-        knockbackTime = 2.0f;
+        knockbackTime = 1f;
+    }
+
+    public void Push(GameObject player)
+    {
+
+        pushForce = 0.05f;
+        pushVelocity = (transform.position - player.transform.position);
+        pushVelocity.y = 0f;
+
+
+        pushTime = 1f;
     }
 
 

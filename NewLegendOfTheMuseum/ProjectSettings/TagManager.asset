@@ -8,6 +8,13 @@ TagManager:
   - AI
   - UI
   - NPC
+  - P1
+  - object
+  - P2
+  - P3
+  - Wing
+  - Propellor
+  - Body
   layers:
   - Default
   - TransparentFX
@@ -19,7 +26,7 @@ TagManager:
   - AI
   - Player
   - NPC
-  - 
+  - Pushable
   - 
   - 
   - 

@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HUBArea/HUBArea.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/DevScene.unity
+    guid: f4f196614de3e1d448e89337e7d524bb
+  - enabled: 1
+    path: Assets/Scenes/Animal World.unity
+    guid: 79542b1334b5cd541b3ad449c6bad467
+  - enabled: 1
+    path: Assets/Scenes/ScienceTech.unity
+    guid: a716d8b0b1423534f94251cc5dac930e
+  - enabled: 1
+    path: Assets/Scenes/ScottishHistory.unity
+    guid: 75118f3dfb2258d4ea1b637feba84162
+  - enabled: 1
+    path: Assets/Scenes/TestingHUB.unity
+    guid: e93375fbbefe46d4da451322899628bd
   m_configObjects: {}

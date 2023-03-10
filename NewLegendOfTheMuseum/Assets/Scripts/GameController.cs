@@ -31,13 +31,12 @@ public class GameController : MonoBehaviour
     {
         if (state == GameState.FreeRoam)
         {
-            Time.timeScale = 1f;
+
             playerMovement.HandleUpdate();
         }
         else if (state == GameState.Dialog)
         {
             DialogueManager.Instance.HandleUpdate();
-            Time.timeScale = 0f;
         }
     }
 }
