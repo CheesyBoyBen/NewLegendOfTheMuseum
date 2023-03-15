@@ -2325,17 +2325,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1689382951}
-  - component: {fileID: 1689382953}
-  - component: {fileID: 1689382955}
+  - component: {fileID: 2046622429}
   m_Layer: 0
-  m_Name: DashWall
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1689382951
+--- !u!4 &2046622429
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
