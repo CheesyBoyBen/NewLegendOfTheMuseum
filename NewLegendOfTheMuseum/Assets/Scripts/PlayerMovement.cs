@@ -210,7 +210,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     public void TakeDamage(int damage, GameObject enemy)
     {
-
+        
 
         currentHealth -= damage;
         healthBar.fillAmount = currentHealth / maxHealth;
@@ -227,7 +227,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     public void Knockback(GameObject enemy)
     {
-        Debug.Log("test");
+        
 
 
         knockbackForce = 0.05f;

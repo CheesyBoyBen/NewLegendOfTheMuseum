@@ -63,10 +63,11 @@ public class Enemy : MonoBehaviour
             transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
 
 
-            if (Vector3.Distance(transform.position, player.transform.position) < 1f)
+            if (Vector3.Distance(transform.position, player.transform.position) < 2f)
             {
                 if (playerMovement.knockbackTime <= 0)
                 {
+                    Debug.Log("test");
                     playerMovement.TakeDamage(damage, this.gameObject);
                 }
             }
