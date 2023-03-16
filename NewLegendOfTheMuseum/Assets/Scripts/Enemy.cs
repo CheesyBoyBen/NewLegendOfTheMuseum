@@ -11,6 +11,11 @@ public class Enemy : MonoBehaviour
 
     public Image healthBar;
 
+    public Image image;
+    public Sprite pow;
+    public Sprite bam;
+    public Sprite whack;
+
     public LayerMask playerLayers;
 
     public float knockbackForce;
@@ -57,6 +62,7 @@ public class Enemy : MonoBehaviour
         }
         else if (knockbackTime <= 0)
         {
+            image.enabled = false;
             distance = Vector3.Distance(transform.position, player.transform.position);
             Vector3 direction = player.transform.position - transform.position;
 
@@ -74,6 +80,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            image.enabled = true;
+
             knockbackTime -= Time.deltaTime;
 
             ch.Move(knockbackVelocity * knockbackForce);
@@ -87,9 +95,26 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        float index = Random.Range(0, 3);
+        switch (index)
+        {
+            case 0:
+                image.sprite = pow;
+                break;
+            case 1:
+
+                image.sprite = bam;
+                break;
+            case 2:
+                image.sprite = whack;
+                break;
+        }
+
+
         currentHealth -= damage;
 
         healthBar.fillAmount = currentHealth / maxHealth;
+
 
 
         if (currentHealth <= 0)
