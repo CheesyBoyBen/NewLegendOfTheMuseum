@@ -28,9 +28,6 @@ public class Enemy : MonoBehaviour
 
     CharacterController ch;
 
-    Rigidbody rb;
-    Vector3 dir;
-
     public PlayerMovement playerMovement;
 
     public GameObject player;
@@ -44,7 +41,6 @@ public class Enemy : MonoBehaviour
         ch = GetComponent<CharacterController>();
 
         currentHealth = maxHealth;
-        rb = GetComponent<Rigidbody>();
 
 
     }
@@ -64,16 +60,15 @@ public class Enemy : MonoBehaviour
         {
             image.enabled = false;
             distance = Vector3.Distance(transform.position, player.transform.position);
-            Vector3 direction = player.transform.position - transform.position;
+            Vector3 direction = (player.transform.position - transform.position) * speed * Time.deltaTime;
 
-            transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            ch.Move(new Vector3(direction.x, 0, direction.z));
 
 
             if (Vector3.Distance(transform.position, player.transform.position) < 2f)
             {
                 if (playerMovement.knockbackTime <= 0)
                 {
-                    Debug.Log("test");
                     playerMovement.TakeDamage(damage, this.gameObject);
                 }
             }

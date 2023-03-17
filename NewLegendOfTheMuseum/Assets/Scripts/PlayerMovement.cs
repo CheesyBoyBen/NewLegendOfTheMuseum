@@ -17,21 +17,17 @@ public class PlayerMovement : MonoBehaviour, Interactable
     private float pushCooldown = 0f;
     public float pushCooldownMax = 3f;
 
-
     [Header("Health")]
     public float maxHealth;
     public float currentHealth;
     public Image healthBar;
-
-
-
-
 
     [Header("Move")]
     public float moveSpeed;
     private float gravity = -9.81f;
     private float velocity;
     public float gravityMultiplier = 3.0f;
+
     [Header("Attack")]
     public Transform attackPoint;
     public Transform interactPoint;
@@ -46,20 +42,24 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public int attackDamage = 40;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+
     [Header("Interact")]
     public float interactRange = 3f;
 
      CharacterController ch;
+
     [Header("Knockback")]
     public float knockbackForce;
     public float knockbackTime;
 
-    Rigidbody rb;
+
     Vector3 knockbackVelocity;
 
     [Header("Audio")]
     public AudioClip attackAudio;
     public AudioManager audioManager;
+
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -67,12 +67,20 @@ public class PlayerMovement : MonoBehaviour, Interactable
         ch = GetComponent<CharacterController>();
         currentHealth = maxHealth;
 
-        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     public void HandleUpdate()
     {
+        if (!(anim.GetCurrentAnimatorStateInfo(0).IsName("spin")))
+        {
+            if ((Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.D)))
+            {
+                anim.Play("running");
+
+            }
+            else { anim.Play("idle");}
+        }
 
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
@@ -90,7 +98,6 @@ public class PlayerMovement : MonoBehaviour, Interactable
                 velocity += gravity * gravityMultiplier * Time.deltaTime;
             }
 
-
             ch.Move(new Vector3(x, velocity, z));
 
             if (Time.time >= nextAttackTime)
@@ -104,8 +111,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
         }
         else
         {
-
-            
+           
             knockbackTime -= Time.deltaTime;
 
             ch.Move(knockbackVelocity * knockbackForce);
@@ -189,6 +195,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     void Attack()
     {
+        anim.Play("spin");
+
         Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
     
         foreach(Collider enemy in hitEnemies)
