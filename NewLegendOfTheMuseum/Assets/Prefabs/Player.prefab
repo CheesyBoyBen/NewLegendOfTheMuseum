@@ -173,7 +173,7 @@ MonoBehaviour:
   maxHealth: 40
   currentHealth: 0
   healthBar: {fileID: 0}
-  moveSpeed: 10
+  moveSpeed: 15.05
   gravityMultiplier: 1
   attackPoint: {fileID: 3655940268175930411}
   interactPoint: {fileID: 8346684268499307307}
