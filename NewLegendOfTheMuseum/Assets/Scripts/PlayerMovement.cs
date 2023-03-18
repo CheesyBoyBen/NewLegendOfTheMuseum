@@ -61,6 +61,9 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     public Animator anim;
 
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -218,7 +221,6 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     public void TakeDamage(int damage, GameObject enemy)
     {
-        
 
         currentHealth -= damage;
         healthBar.fillAmount = currentHealth / maxHealth;
