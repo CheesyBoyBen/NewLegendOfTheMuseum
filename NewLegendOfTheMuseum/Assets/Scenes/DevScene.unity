@@ -2153,7 +2153,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602395671}
   m_LocalRotation: {x: 0.33265492, y: 0, z: 0, w: 0.94304866}
-  m_LocalPosition: {x: 0, y: 0, z: -132.9}
+  m_LocalPosition: {x: 0, y: 0, z: -150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2162,7 +2162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 38.86, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235, y: 53}
+  m_AnchoredPosition: {x: -6, y: -150}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1602395673
@@ -3020,6 +3020,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2982033120407203457, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5f643b52b2caac0479e2a63a08ee97a8, type: 2}
     - target: {fileID: 5283181739037610761, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 280
@@ -3069,9 +3073,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1039011477}
     - target: {fileID: 5810360607649963186, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+      propertyPath: enemyMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 5f643b52b2caac0479e2a63a08ee97a8, type: 2}
+    - target: {fileID: 5810360607649963186, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+      propertyPath: powImage
+      value: 
+      objectReference: {fileID: 1602395671}
+    - target: {fileID: 5810360607649963186, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
       propertyPath: maxHealth
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5810360607649963186, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+      propertyPath: enemyFlashMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 157956d5ed5972445b5c34fdaf3f3df6, type: 2}
+    - target: {fileID: 5810360607649963186, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+      propertyPath: enemyRenderer
+      value: 
+      objectReference: {fileID: 2377445496730630727}
     - target: {fileID: 5810360607649963186, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
       propertyPath: playerMovement
       value: 
@@ -3086,6 +3106,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+--- !u!137 &2377445496730630727 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2982033120407203457, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
+  m_PrefabInstance: {fileID: 2377445496730630726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4186854308466856762
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 
     public Image healthBar;
 
+    public GameObject powImage;
     public Image image;
     public Sprite pow;
     public Sprite bam;
@@ -34,6 +35,11 @@ public class Enemy : MonoBehaviour
     public float speed;
 
     private float distance;
+
+    [Header("mats")]
+    public SkinnedMeshRenderer enemyRenderer;
+    public Material enemyMat;
+    public Material enemyFlashMat;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +65,7 @@ public class Enemy : MonoBehaviour
         else if (knockbackTime <= 0)
         {
             image.enabled = false;
+
             distance = Vector3.Distance(transform.position, player.transform.position);
             Vector3 direction = (player.transform.position - transform.position) * speed * Time.deltaTime;
 
@@ -85,11 +92,21 @@ public class Enemy : MonoBehaviour
             else { knockbackForce -= Time.deltaTime / 10; }
         }
 
+        if (knockbackTime <= 0.9f)
+        {
+            enemyRenderer.material = enemyMat;
+
+        }
+
     }
 
 
     public void TakeDamage(int damage)
     {
+
+        enemyRenderer.material = enemyFlashMat;
+
+
         float index = Random.Range(0, 3);
         switch (index)
         {
@@ -105,6 +122,7 @@ public class Enemy : MonoBehaviour
                 break;
         }
 
+        powImage.transform.localPosition = new Vector3(Random.Range(-200.0f, 200.0f), Random.Range(-150.0f, 50.0f), -150);
 
         currentHealth -= damage;
 
