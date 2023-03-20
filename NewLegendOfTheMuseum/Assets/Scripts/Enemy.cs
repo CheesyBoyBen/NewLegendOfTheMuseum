@@ -193,5 +193,8 @@ public class Enemy : MonoBehaviour
         pushTime = 1f;
     }
 
-
+    public void OnPlatform(Vector3 diff)
+    {
+        ch.Move(diff);
+    }
 }

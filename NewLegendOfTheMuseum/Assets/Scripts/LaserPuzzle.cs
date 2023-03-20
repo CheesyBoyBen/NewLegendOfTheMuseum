@@ -17,7 +17,7 @@ public class LaserPuzzle : MonoBehaviour
     public GameObject planet7;
     public GameObject planet8;
 
-
+    private bool won = false;
 
 
     // Update is called once per frame
@@ -233,14 +233,20 @@ public class LaserPuzzle : MonoBehaviour
 
         }
 
-        if ((Mathf.Round(planet7.transform.eulerAngles.y) == ((45 * 2) - 45)) && (planet7.GetComponent<LineRenderer>().enabled))
+        if ((Mathf.Round(planet7.transform.eulerAngles.y) == ((45 * 5) - 45)) && (planet7.GetComponent<LineRenderer>().enabled))
         {
             planet8.GetComponent<LineRenderer>().enabled = true;
+            if (!won) { WinCondition(); won = true; }
         }
         else
         {
             planet8.GetComponent<LineRenderer>().enabled = false;
 
         }
+    }
+
+    void WinCondition()
+    {
+        Debug.Log("Puzzle Complete");
     }
 }

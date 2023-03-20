@@ -11,6 +11,13 @@ public class MovingPlatform : MonoBehaviour
     private bool move;
     private float moveTime;
 
+    private Vector3 posChange;
+    private Vector3 lastPos;
+    private Vector3 newPos;
+
+    private GameObject player;
+    private GameObject enemy;
+
     void Start()
     {
         moveTime = 0.01f;
@@ -19,6 +26,8 @@ public class MovingPlatform : MonoBehaviour
 
     void Update()
     {
+        lastPos = transform.position;
+
         if (move == true)
         {
             float time = Mathf.PingPong(Time.time * speed, 1);
@@ -40,5 +49,45 @@ public class MovingPlatform : MonoBehaviour
                 moveTime = 0.01f;
             }
         }
+
+        newPos = transform.position;
+        posChange = newPos - lastPos;
+
+        if (player != null)
+        {
+            player.GetComponent<PlayerMovement>().OnPlatform(posChange);
+        }
+
+        if (enemy != null)
+        {
+            enemy.GetComponent<Enemy>().OnPlatform(posChange);
+        }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            player = other.gameObject;
+        }
+
+        if (other.tag == "Enemy")
+        {
+            enemy = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            player = null;
+        }
+
+        if (other.tag == "Enemy")
+        {
+            enemy = null;
+        }
+    }
+
 }

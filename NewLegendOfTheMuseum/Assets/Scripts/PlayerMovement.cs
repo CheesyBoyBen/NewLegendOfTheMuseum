@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
             }
             else { anim.Play("idle");}
         }
-
+        
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
@@ -154,6 +154,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
         }
 
 
+    
     }
 
     IEnumerator Dash()
@@ -250,4 +251,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     }
 
+    public void OnPlatform(Vector3 diff)
+    {
+        ch.Move(diff);        
+    }
 }
