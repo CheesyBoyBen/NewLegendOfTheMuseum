@@ -33,8 +33,11 @@ public class Enemy : MonoBehaviour
 
     public GameObject player;
     public float speed;
+    public float chaseDist;
 
     private float distance;
+
+    public Animator anim;
 
     [Header("mats")]
     public SkinnedMeshRenderer enemyRenderer;
@@ -53,9 +56,15 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+
+
         if (pushTime >= 0)
         {
-            pushTime -= Time.deltaTime;
+            if (!(anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")))
+            {
+                anim.Play("Idle");
+            }
+                pushTime -= Time.deltaTime;
 
             ch.Move(pushVelocity * pushForce);
 
@@ -66,22 +75,44 @@ public class Enemy : MonoBehaviour
         {
             image.enabled = false;
 
-            distance = Vector3.Distance(transform.position, player.transform.position);
-            Vector3 direction = (player.transform.position - transform.position) * speed * Time.deltaTime;
+            distance = Vector3.Distance(transform.position, player.transform.position);            
 
-            ch.Move(new Vector3(direction.x, 0, direction.z));
-
-
-            if (Vector3.Distance(transform.position, player.transform.position) < 2f)
+            if (distance < chaseDist)
             {
-                if (playerMovement.knockbackTime <= 0)
+                if (!(anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")))
                 {
-                    playerMovement.TakeDamage(damage, this.gameObject);
+                    anim.Play("Run");
+                }
+
+                Vector3 direction = (player.transform.position - transform.position) * speed * Time.deltaTime;
+
+                ch.Move(new Vector3(direction.x, 0, direction.z));
+
+
+                if (distance < 2f)
+                {
+                    if (playerMovement.knockbackTime <= 0)
+                    {
+                        playerMovement.TakeDamage(damage, this.gameObject);
+                        anim.Play("Attack");
+                    }
+                }
+            }
+            else
+            {
+                if (!(anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")))
+                {
+                    anim.Play("Idle");
                 }
             }
         }
         else
         {
+            if (!(anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")))
+            {
+                anim.Play("Idle");
+            }
+
             image.enabled = true;
 
             knockbackTime -= Time.deltaTime;
