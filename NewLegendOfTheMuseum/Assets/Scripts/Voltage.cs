@@ -15,6 +15,8 @@ public class Voltage : MonoBehaviour
 
     private bool oneTime = false;
 
+    public GameObject elevator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,9 @@ public class Voltage : MonoBehaviour
             ds.Add();
             oneTime = true; 
         }
+
+        if(ds.DCounter == 3)
+            elevator.gameObject.SetActive(true);
 
     }
 

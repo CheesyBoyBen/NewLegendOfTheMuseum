@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestingHUB.unity
     guid: e93375fbbefe46d4da451322899628bd
+  - enabled: 1
+    path: Assets/Scenes/Computer1.unity
+    guid: 6feb011411ca3184ea13fb2205bb9ff7
   m_configObjects: {}
