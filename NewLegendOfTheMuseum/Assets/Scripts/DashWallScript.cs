@@ -41,7 +41,6 @@ public class DashWallScript : MonoBehaviour
 
     private void dash()
     {
-        Debug.Log("dash test");
         dashTime = 0.2f;
     }
 }
