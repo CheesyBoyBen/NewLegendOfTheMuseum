@@ -123,11 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1 &174073059
-=======
---- !u!1 &727935093
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,23 +131,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 174073060}
   m_Layer: 0
   m_Name: Posters
-=======
-  - component: {fileID: 727935096}
-  - component: {fileID: 727935095}
-  - component: {fileID: 727935094}
-  m_Layer: 0
-  m_Name: GameManager
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!4 &174073060
 Transform:
   m_ObjectHideFlags: 0
@@ -711,15 +698,11 @@ GameObject:
   m_PrefabInstance: {fileID: 1712172640}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &606239128
-=======
---- !u!114 &727935094
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 606239125}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -829,22 +812,10 @@ GameObject:
   m_IsActive: 1
 --- !u!108 &678614633
 Light:
-=======
-  m_GameObject: {fileID: 727935093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb08fa0c9357a245ac2739682a2d45d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMovement: {fileID: 0}
---- !u!114 &727935095
-MonoBehaviour:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 678614632}
   m_Enabled: 1
   serializedVersion: 10
@@ -902,18 +873,6 @@ MonoBehaviour:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &678614634
-=======
-  m_GameObject: {fileID: 727935093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1e5e3622352514478d4f810a400c153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 0}
-  dialogText: {fileID: 0}
-  lettersPerSecond: 45
---- !u!4 &727935096
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -926,7 +885,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< Updated upstream
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &690942437
@@ -4090,7 +4048,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
-=======
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
