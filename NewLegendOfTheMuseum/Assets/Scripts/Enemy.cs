@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-
+        transform.LookAt(player.transform);
 
         if (pushTime >= 0)
         {

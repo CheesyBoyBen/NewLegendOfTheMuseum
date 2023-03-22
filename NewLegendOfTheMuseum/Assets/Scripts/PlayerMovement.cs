@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public AudioManager audioManager;
 
     public Animator anim;
+    public GameObject mesh;
 
 
 
@@ -84,7 +85,55 @@ public class PlayerMovement : MonoBehaviour, Interactable
             }
             else { anim.Play("idle");}
         }
-        
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                mesh.transform.eulerAngles = new Vector3(0, 315, 0);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                mesh.transform.eulerAngles = new Vector3(0, 45, 0);
+
+            }
+            else
+            {
+                mesh.transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                mesh.transform.eulerAngles = new Vector3(0, 225, 0);
+
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                mesh.transform.eulerAngles = new Vector3(0, 135, 0);
+
+            }
+            else
+            {
+                mesh.transform.eulerAngles = new Vector3(0, 180, 0);
+
+            }
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            mesh.transform.eulerAngles = new Vector3(0, 270, 0);
+
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            mesh.transform.eulerAngles = new Vector3(0, 90, 0);
+
+        }
+
+
+
+
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
