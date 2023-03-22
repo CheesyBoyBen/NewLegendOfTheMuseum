@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour, Interactable
 {
+    public KeyCode powerKey = KeyCode.E;
 
     [Header("Dash")]
     public float dashSpeed;
@@ -16,6 +17,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public float pushRange = 10f;
     private float pushCooldown = 0f;
     public float pushCooldownMax = 3f;
+
+    public float curPower;
 
     [Header("Health")]
     public float maxHealth;
@@ -70,7 +73,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     {
         ch = GetComponent<CharacterController>();
         currentHealth = maxHealth;
-
+        curPower = 2;
     }
 
     // Update is called once per frame
@@ -183,31 +186,48 @@ public class PlayerMovement : MonoBehaviour, Interactable
         }
 
         
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();
         }
 
-        if (Input.GetKeyDown(dashKey))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            StartCoroutine(Dash());
-        }
-        if ((Input.GetKey(pushKey)) && (pushCooldown <= 0))
-        {
-            push();
-            pushCooldown = pushCooldownMax;
-        }
-        else
-        {
-            pushCooldown -= Time.deltaTime;
+            curPower = 1;
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            curPower = 2;
+        }
 
-    
+        if (Input.GetKeyDown(powerKey))
+        {
+            if (curPower == 1)
+            {
+                StartCoroutine(Dash());
+            }
+
+            if ((curPower == 2) && (pushCooldown <= 0))
+            {
+                push();
+                pushCooldown = pushCooldownMax;
+            }
+
+            if (curPower == 3)
+            {
+                //Volt Power
+            }
+        }
+        pushCooldown -= Time.deltaTime;
+
+
     }
 
     IEnumerator Dash()
     {
+        
+
         float startTime = Time.time;
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;

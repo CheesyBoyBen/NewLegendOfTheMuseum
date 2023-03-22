@@ -20,7 +20,7 @@ public class PickUpObject : MonoBehaviour
     {
         if(canpickup == true) // if you enter thecollider of the objecct
         {
-            if (Input.GetKeyDown(KeyCode.Z))  // can be e or any key 
+            if (Input.GetKeyDown(KeyCode.E))  // can be e or any key 
             {
                 ObjectIwantToPickUp.GetComponent<Rigidbody>().isKinematic = true;   //makes the rigidbody not be acted upon by forces
                 ObjectIwantToPickUp.transform.position = myHands.transform.position; // sets the position of the object to your hand position

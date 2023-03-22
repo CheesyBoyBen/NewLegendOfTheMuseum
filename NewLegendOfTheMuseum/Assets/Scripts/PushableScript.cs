@@ -33,9 +33,7 @@ public class PushableScript : MonoBehaviour
 
     public void Push(GameObject player)
     {
-        Debug.Log("Push test");
-
-
+       
         pushForce = pushForceMax;
         pushVelocity = (transform.position - player.transform.position);
         pushVelocity.y = 0f;
