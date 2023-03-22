@@ -153,7 +153,7 @@ public class Enemy : MonoBehaviour
                 break;
         }
 
-        powImage.transform.localPosition = new Vector3(Random.Range(-200.0f, 200.0f), Random.Range(-150.0f, 50.0f), -150);
+        powImage.transform.localPosition = new Vector3(Random.Range(-200.0f, 200.0f), Random.Range(-150.0f, 50.0f), 150);
 
         currentHealth -= damage;
 
