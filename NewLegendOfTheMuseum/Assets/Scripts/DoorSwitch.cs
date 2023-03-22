@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DoorSwitch : MonoBehaviour
 {
     public int DCounter;
-
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +16,7 @@ public class DoorSwitch : MonoBehaviour
     private void Update()
     {
         if (DCounter == 3)
-            this.gameObject.SetActive(true);
+            this.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,6 +24,4 @@ public class DoorSwitch : MonoBehaviour
     {
         DCounter++; 
     }
-
-
 }
