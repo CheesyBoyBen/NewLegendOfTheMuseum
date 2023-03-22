@@ -153,6 +153,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 128041051}
+    - target: {fileID: 3655940268213294188, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 394307741}
     - target: {fileID: 3655940268213294194, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
       propertyPath: m_Name
       value: Player
@@ -167,15 +171,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8346684268499307307, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3005
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 8346684268499307307, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3005
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 8346684268499307307, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3005
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 8346684268499307307, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -776,6 +780,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 380c4ca18e30bd2439801fbf9408d1af, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b4f0c7e79288554eb87cb174524924a, type: 3}
+--- !u!1 &394307741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4503014257814399043, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
+  m_PrefabInstance: {fileID: 17593946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &426544426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f78de412754bc554284ed59b47c32ebd, type: 3}
