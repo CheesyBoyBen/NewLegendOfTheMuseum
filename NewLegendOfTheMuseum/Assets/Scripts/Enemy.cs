@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour
     public float chaseDist;
 
     private float distance;
+    public float attackDistance;
 
     public Animator anim;
 
@@ -50,8 +51,6 @@ public class Enemy : MonoBehaviour
         ch = GetComponent<CharacterController>();
 
         currentHealth = maxHealth;
-
-
     }
 
     private void Update()
@@ -89,7 +88,7 @@ public class Enemy : MonoBehaviour
                 ch.Move(new Vector3(direction.x, 0, direction.z));
 
 
-                if (distance < 2f)
+                if (distance <= attackDistance)
                 {
                     if (playerMovement.knockbackTime <= 0)
                     {

@@ -7,6 +7,8 @@ public class DashWallScript : MonoBehaviour
 
     public KeyCode dashKey = KeyCode.E;
     public float dashTime;
+    public GameObject player;
+
 
     public BoxCollider col;
 
@@ -21,7 +23,7 @@ public class DashWallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(dashKey))
+        if ((Input.GetKeyDown(dashKey))&& (player.GetComponent<PlayerMovement>().curPower == 1))
         {
             dash();
         }

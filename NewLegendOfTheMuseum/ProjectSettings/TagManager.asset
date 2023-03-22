@@ -15,6 +15,7 @@ TagManager:
   - Wing
   - Propellor
   - Body
+  - Pushable
   layers:
   - Default
   - TransparentFX

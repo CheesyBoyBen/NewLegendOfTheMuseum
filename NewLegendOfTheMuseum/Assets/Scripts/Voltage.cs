@@ -28,7 +28,7 @@ public class Voltage : MonoBehaviour
     void Update()
     {
         Text.text = counter.ToString();
-        if (Input.GetKeyDown(KeyCode.Z) && canAdd == true)
+        if (Input.GetKeyDown(KeyCode.E) && canAdd == true)
         {
             counter++;
         }
