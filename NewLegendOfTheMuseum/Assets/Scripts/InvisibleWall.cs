@@ -5,7 +5,6 @@ using UnityEngine;
 public class InvisibleWall : MonoBehaviour
 {
     public GameObject player;
-    public float distance;
     public MeshRenderer wallRenderer;
     public Material wallMat;
     public Material invisWallMat;
@@ -19,7 +18,7 @@ public class InvisibleWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) <= distance)
+        if (Vector3.Distance(transform.position, player.transform.position) <= 10)
         {
             wallRenderer.material = invisWallMat;
         }
