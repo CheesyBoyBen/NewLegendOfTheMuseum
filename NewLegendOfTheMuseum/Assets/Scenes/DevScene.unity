@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a877750cbf480f449ddc8028eee617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 0
+  Distance: 10
   player: {fileID: 3655940267607902010}
   wallRenderer: {fileID: 364517167}
   wallMat: {fileID: 2100000, guid: f392b42b21214054d9a096ea184b8d6e, type: 2}
@@ -5573,7 +5573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a877750cbf480f449ddc8028eee617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 0
+  Distance: 10
   player: {fileID: 3655940267607902010}
   wallRenderer: {fileID: 1082983693}
   wallMat: {fileID: 2100000, guid: f392b42b21214054d9a096ea184b8d6e, type: 2}
@@ -8040,7 +8040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a877750cbf480f449ddc8028eee617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 0
+  Distance: 10
   player: {fileID: 3655940267607902010}
   wallRenderer: {fileID: 1726396915}
   wallMat: {fileID: 2100000, guid: f392b42b21214054d9a096ea184b8d6e, type: 2}
@@ -8231,7 +8231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a877750cbf480f449ddc8028eee617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 0
+  Distance: 10
   player: {fileID: 3655940267607902010}
   wallRenderer: {fileID: 1769336548}
   wallMat: {fileID: 2100000, guid: f392b42b21214054d9a096ea184b8d6e, type: 2}
@@ -8540,7 +8540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a877750cbf480f449ddc8028eee617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 0
+  Distance: 10
   player: {fileID: 3655940267607902010}
   wallRenderer: {fileID: 1846610437}
   wallMat: {fileID: 2100000, guid: f392b42b21214054d9a096ea184b8d6e, type: 2}
