@@ -989,7 +989,6 @@ GameObject:
   - component: {fileID: 111290151}
   - component: {fileID: 111290150}
   - component: {fileID: 111290149}
-  - component: {fileID: 111290153}
   m_Layer: 6
   m_Name: Enemy (2)
   m_TagString: Enemy
@@ -1083,19 +1082,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: -75, z: 0}
---- !u!114 &111290153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111290148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec3513ecb5ad55649a640edf59bc0641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1747106824}
 --- !u!1 &159636705
 GameObject:
   m_ObjectHideFlags: 0
@@ -7698,7 +7684,6 @@ GameObject:
   - component: {fileID: 1535764689}
   - component: {fileID: 1535764688}
   - component: {fileID: 1535764687}
-  - component: {fileID: 1535764691}
   m_Layer: 6
   m_Name: Enemy (1)
   m_TagString: Enemy
@@ -7792,19 +7777,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: -240, z: 0}
---- !u!114 &1535764691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535764686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec3513ecb5ad55649a640edf59bc0641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1747106824}
 --- !u!1001 &1572883170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8213,7 +8185,7 @@ MonoBehaviour:
   gravityMultiplier: 1
   attackPoint: {fileID: 893255243}
   interactPoint: {fileID: 1681424319}
-  attackRange: 5
+  attackRange: 10
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64

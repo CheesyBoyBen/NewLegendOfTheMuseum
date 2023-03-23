@@ -445,7 +445,7 @@ MonoBehaviour:
   dashTime: 0.2
   dashKey: 101
   pushKey: 113
-  pushRange: 5
+  pushRange: 10
   pushCooldownMax: 3
   curPower: 0
   maxHealth: 40
@@ -455,7 +455,7 @@ MonoBehaviour:
   gravityMultiplier: 1
   attackPoint: {fileID: 1123389300}
   interactPoint: {fileID: 443340762}
-  attackRange: 5
+  attackRange: 10
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
