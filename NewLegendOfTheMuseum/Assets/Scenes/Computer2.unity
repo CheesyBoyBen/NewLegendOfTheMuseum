@@ -173,6 +173,10 @@ PrefabInstance:
       propertyPath: mesh
       value: 
       objectReference: {fileID: 394307741}
+    - target: {fileID: 3655940268213294188, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
+      propertyPath: attackRate
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3655940268213294194, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2485,7 +2489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3513ecb5ad55649a640edf59bc0641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1355856182}
 --- !u!114 &944434707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3508,7 +3512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f78de412754bc554284ed59b47c32ebd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 180.86935
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f78de412754bc554284ed59b47c32ebd, type: 3}
       propertyPath: m_LocalScale.z
@@ -3524,7 +3528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f78de412754bc554284ed59b47c32ebd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -69.17767
+      value: -71.99
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f78de412754bc554284ed59b47c32ebd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3560,6 +3564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f78de412754bc554284ed59b47c32ebd, type: 3}
+--- !u!1 &1355856182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 988793320341107048, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
+  m_PrefabInstance: {fileID: 17593946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1404916530 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f78de412754bc554284ed59b47c32ebd, type: 3}
@@ -5075,8 +5084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24198e54bf41344f856992101f6b287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  maxHealth: 20
+  damage: 5
+  maxHealth: 5
   currentHealth: 0
   healthBar: {fileID: 681570824}
   powImage: {fileID: 382665960}
