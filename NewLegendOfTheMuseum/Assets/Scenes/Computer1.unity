@@ -440,12 +440,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c86bb3df2fc7a14ba27fe1f35dd374f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerKey: 101
   dashSpeed: 500
   dashTime: 0.2
   dashKey: 101
   pushKey: 113
   pushRange: 5
   pushCooldownMax: 3
+  curPower: 0
   maxHealth: 40
   currentHealth: 0
   healthBar: {fileID: 831854326}
@@ -2295,6 +2297,7 @@ MonoBehaviour:
     lines:
     - Lookey what we have here ?
     - 'Is someone calling from the other side '
+    - What's through the portal?
 --- !u!54 &1489005909
 Rigidbody:
   m_ObjectHideFlags: 0
