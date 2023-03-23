@@ -11,7 +11,7 @@ public class PickUpObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canpickup = false;    //setting both to false
+        canpickup = true;    //setting both to false
         hasItem = false;
     }
 
@@ -25,6 +25,7 @@ public class PickUpObject : MonoBehaviour
                 ObjectIwantToPickUp.GetComponent<Rigidbody>().isKinematic = true;   //makes the rigidbody not be acted upon by forces
                 ObjectIwantToPickUp.transform.position = myHands.transform.position; // sets the position of the object to your hand position
                 ObjectIwantToPickUp.transform.parent = myHands.transform; //makes the object become a child of the parent so that it moves with the hands
+                canpickup = false;
             }
         }
         if (Input.GetKeyDown(KeyCode.X) && hasItem == true) // if you have an item and get the key to remove the object, again can be any key
@@ -38,13 +39,13 @@ public class PickUpObject : MonoBehaviour
     {
         if(other.gameObject.tag == "object") //on the object you want to pick up set the tag to be anything, in this case "object"
         {
-            canpickup = true;  //set the pick up bool to true
+           // canpickup = true;  //set the pick up bool to true
             ObjectIwantToPickUp = other.gameObject; //set the gameobject you collided with to one you can reference
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        canpickup = false; //when you leave the collider set the canpickup bool to false
+      //  canpickup = false; //when you leave the collider set the canpickup bool to false
        
     }
 }
