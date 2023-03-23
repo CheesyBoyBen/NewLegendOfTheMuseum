@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c86bb3df2fc7a14ba27fe1f35dd374f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerKey: 101
+  powerKey: 113
   dashSpeed: 500
   dashTime: 0.2
   dashKey: 101
