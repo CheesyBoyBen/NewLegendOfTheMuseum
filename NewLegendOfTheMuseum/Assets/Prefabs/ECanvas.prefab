@@ -160,7 +160,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3934197513445114061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  camera: {fileID: 0}
+  playerCamera: {fileID: 0}
   image: {fileID: 3322174960948125753}
   minDist: 5
