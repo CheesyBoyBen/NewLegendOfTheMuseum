@@ -710,6 +710,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 1791885534}
   minDist: 2
+  speed: 5
 --- !u!114 &164149330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,7 +1380,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d63d892e6a167664ebc12531f052f7e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1951,6 +1952,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 1621771174}
   minDist: 2
+  speed: 5
 --- !u!114 &348127664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3347,7 +3349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 983ec787242120d4b8f401fe5c4672fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashKey: 101
+  dashKey: 113
   dashTime: 0.3
   player: {fileID: 3655940267607902010}
   col: {fileID: 559681708}
@@ -3498,7 +3500,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3f6014729057d17428c2dafb79363d69, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3999,6 +4001,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 1698605294}
   minDist: 2
+  speed: 5
 --- !u!114 &704151239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4718,6 +4721,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 6177030}
   minDist: 2
+  speed: 5
 --- !u!114 &867707995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4872,6 +4876,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 779945976}
   minDist: 2
+  speed: 5
 --- !u!114 &1015124524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5678,6 +5683,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147016726}
   m_CullTransparentMesh: 1
+--- !u!1001 &1190753123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.6088705
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.003195
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
+      propertyPath: m_Name
+      value: Sattellite3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96f2c7dd539528346944000eead6f7a4, type: 3}
 --- !u!1 &1197523788
 GameObject:
   m_ObjectHideFlags: 0
@@ -6971,6 +7045,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 2057797465}
   minDist: 2
+  speed: 5
 --- !u!114 &1578733297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7495,6 +7570,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 523803408}
   minDist: 2
+  speed: 5
 --- !u!95 &1681298249 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 001fc1a6192b1da4d91f5df695f8f414, type: 3}
@@ -8218,6 +8294,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 689892474}
   minDist: 2
+  speed: 5
 --- !u!114 &1831878791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8451,6 +8528,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 3855483}
   minDist: 2
+  speed: 5
 --- !u!114 &1877049501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8894,6 +8972,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 352921146}
   minDist: 2
+  speed: 5
 --- !u!114 &1970680719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9012,6 +9091,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 122817097}
   minDist: 2
+  speed: 5
 --- !u!114 &1979333660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9249,7 +9329,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 90f727e6756987046a0b48ecfeb41cc7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9501,6 +9581,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1457404858}
   image: {fileID: 1330404409}
   minDist: 2
+  speed: 5
 --- !u!114 &2146213680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10014,7 +10095,7 @@ MonoBehaviour:
   powerKey: 113
   dashSpeed: 500
   dashTime: 0.2
-  dashKey: 101
+  dashKey: 113
   pushKey: 113
   pushRange: 5
   pushCooldownMax: 3

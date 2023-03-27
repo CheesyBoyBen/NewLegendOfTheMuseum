@@ -194,6 +194,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3655940268213294188, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
+      propertyPath: attackAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: a37f44cbf8c2a7443a3c361efa2f233a, type: 3}
+    - target: {fileID: 3655940268213294188, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
       propertyPath: attackRange
       value: 10
       objectReference: {fileID: 0}
@@ -2374,7 +2378,7 @@ PrefabInstance:
     - target: {fileID: 5909517595042860591, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: a8965f1800e3f8a4eac7c33378f6f02e, type: 3}
+      objectReference: {fileID: 8300000, guid: 02822cc1ab2d75b429ed4c4b9df7bfae, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
 --- !u!114 &823374341 stripped

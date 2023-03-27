@@ -5,7 +5,7 @@ using UnityEngine;
 public class DashWallScript : MonoBehaviour
 {
 
-    public KeyCode dashKey = KeyCode.E;
+    public KeyCode dashKey = KeyCode.Q;
     public float dashTime;
     public GameObject player;
 
