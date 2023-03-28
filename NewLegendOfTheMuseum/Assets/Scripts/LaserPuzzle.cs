@@ -5,6 +5,9 @@ using UnityEngine;
 public class LaserPuzzle : MonoBehaviour
 {
     public GameObject player;
+    public GameObject satellite;
+
+    public float dist;
 
     [Header("Planets")]
     public GameObject sun;
@@ -25,7 +28,7 @@ public class LaserPuzzle : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Vector3.Distance(sun.transform.position, player.transform.position) <= 2f)
+            if (Vector3.Distance(sun.transform.position, player.transform.position) <= dist)
             {
                 sun.transform.eulerAngles = new Vector3(sun.transform.eulerAngles.x, sun.transform.eulerAngles.y + 45, sun.transform.eulerAngles.z);
 
@@ -39,7 +42,7 @@ public class LaserPuzzle : MonoBehaviour
                 }                
             }
 
-            if (Vector3.Distance(planet1.transform.position, player.transform.position) <= 2f)
+            if (Vector3.Distance(planet1.transform.position, player.transform.position) <= dist)
             {
                 planet1.transform.eulerAngles = new Vector3(planet1.transform.eulerAngles.x, planet1.transform.eulerAngles.y + 45, planet1.transform.eulerAngles.z);
 
@@ -53,7 +56,7 @@ public class LaserPuzzle : MonoBehaviour
                 }                
             }
 
-            if (Vector3.Distance(planet2.transform.position, player.transform.position) <= 2f)
+            if (Vector3.Distance(planet2.transform.position, player.transform.position) <= dist)
             {
                 planet2.transform.eulerAngles = new Vector3(planet2.transform.eulerAngles.x, planet2.transform.eulerAngles.y + 45, planet2.transform.eulerAngles.z);
 
@@ -67,7 +70,7 @@ public class LaserPuzzle : MonoBehaviour
                 }
             }
 
-            if (Vector3.Distance(planet3.transform.position, player.transform.position) <= 2f)
+            if (Vector3.Distance(planet3.transform.position, player.transform.position) <= dist)
             {
                 planet3.transform.eulerAngles = new Vector3(planet3.transform.eulerAngles.x, planet3.transform.eulerAngles.y + 45, planet3.transform.eulerAngles.z);
 
@@ -81,7 +84,7 @@ public class LaserPuzzle : MonoBehaviour
                 }
             }
 
-            if (Vector3.Distance(planet4.transform.position, player.transform.position) <= 2f)
+            if (Vector3.Distance(planet4.transform.position, player.transform.position) <= dist)
             {
                 planet4.transform.eulerAngles = new Vector3(planet4.transform.eulerAngles.x, planet4.transform.eulerAngles.y + 45, planet4.transform.eulerAngles.z);
 
@@ -95,7 +98,7 @@ public class LaserPuzzle : MonoBehaviour
                 }
             }
 
-            if (Vector3.Distance(planet5.transform.position, player.transform.position) <= 2f)
+            if (Vector3.Distance(planet5.transform.position, player.transform.position) <= dist)
             {
                 planet5.transform.eulerAngles = new Vector3(planet5.transform.eulerAngles.x, planet5.transform.eulerAngles.y + 45, planet5.transform.eulerAngles.z);
 
@@ -109,7 +112,7 @@ public class LaserPuzzle : MonoBehaviour
                 }
             }
 
-            if (Vector3.Distance(planet6.transform.position, player.transform.position) <= 2f)
+            if (Vector3.Distance(planet6.transform.position, player.transform.position) <= dist)
             {
                 planet6.transform.eulerAngles = new Vector3(planet6.transform.eulerAngles.x, planet6.transform.eulerAngles.y + 45, planet6.transform.eulerAngles.z);
 
@@ -123,7 +126,7 @@ public class LaserPuzzle : MonoBehaviour
                 }
             }
 
-            if (Vector3.Distance(planet7.transform.position, player.transform.position) <= 2f)
+            if (Vector3.Distance(planet7.transform.position, player.transform.position) <= dist)
             {
                 planet7.transform.eulerAngles = new Vector3(planet7.transform.eulerAngles.x, planet7.transform.eulerAngles.y + 45, planet7.transform.eulerAngles.z);
 
@@ -137,7 +140,7 @@ public class LaserPuzzle : MonoBehaviour
                 }
             }
 
-            if (Vector3.Distance(planet8.transform.position, player.transform.position) <= 2f)
+            if (Vector3.Distance(planet8.transform.position, player.transform.position) <= dist)
             {
                 planet8.transform.eulerAngles = new Vector3(planet8.transform.eulerAngles.x, planet8.transform.eulerAngles.y + 45, planet8.transform.eulerAngles.z);
 
@@ -159,7 +162,17 @@ public class LaserPuzzle : MonoBehaviour
 
     void CheckRotations()
     {
-                
+
+        if (satellite.GetComponent<LineRenderer>().enabled)
+        {
+            sun.GetComponent<LineRenderer>().enabled = true;
+        }
+        else
+        {
+            sun.GetComponent<LineRenderer>().enabled = false;
+
+        }
+
         if ((Mathf.Round(sun.transform.eulerAngles.y) == ((45 * 3) - 45)) && (sun.GetComponent<LineRenderer>().enabled))
         {
             planet1.GetComponent<LineRenderer>().enabled = true;

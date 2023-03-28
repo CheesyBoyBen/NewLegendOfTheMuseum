@@ -12,6 +12,8 @@ public class MorsePuzzle : MonoBehaviour
     public GameObject dash;
     public GameObject player;
     public TextMeshProUGUI TMP;
+    public GameObject portal;
+
 
     // Start is called before the first frame update
     void Start()
@@ -156,7 +158,7 @@ public class MorsePuzzle : MonoBehaviour
             {
                 if (morse == sequence)
                 {
-                    Debug.Log("puzzle complete");
+                    puzzleComplete();
                     morse = "";
                 }
                 else
@@ -166,5 +168,11 @@ public class MorsePuzzle : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void puzzleComplete()
+    {
+        Debug.Log("puzzle complete");
+        portal.SetActive(true);
     }
 }
