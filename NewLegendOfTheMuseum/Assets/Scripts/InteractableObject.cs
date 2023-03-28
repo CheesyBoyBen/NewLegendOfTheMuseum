@@ -11,11 +11,14 @@ public class InteractableObject : MonoBehaviour
     public Image image;
     public float minDist;
 
+    private float time;
+    public float speed = 5;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        time = 0;
     }
 
     // Update is called once per frame
@@ -27,10 +30,27 @@ public class InteractableObject : MonoBehaviour
         if (Vector3.Distance(transform.position, player.transform.position) <= minDist)
         {
             image.enabled = true;
+            time += Time.deltaTime * speed;
+            if (time > 1f) { time = 1f; }
+            Apear();
         }
         else 
         {
             image.enabled = false;
+            time = 0;
         }
+    }
+
+    void Apear()
+    {
+        image.enabled = true;
+
+        image.transform.localScale = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0.01f, 0.01f, 0.01f), time); ;
+
+    }
+
+    void Disapear()
+    {
+
     }
 }

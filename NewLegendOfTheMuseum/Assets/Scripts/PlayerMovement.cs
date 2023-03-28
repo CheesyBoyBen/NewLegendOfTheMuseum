@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     {
         ch = GetComponent<CharacterController>();
         currentHealth = maxHealth;
-        curPower = 2;
+        curPower = 1;
     }
 
     // Update is called once per frame
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
     {
         if (!(anim.GetCurrentAnimatorStateInfo(0).IsName("spin")))
         {
-            if ((Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.D)))
+            if ((Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.UpArrow)) || (Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.DownArrow)) || (Input.GetKey(KeyCode.RightArrow)))
             {
                 anim.Play("running");
 
@@ -89,13 +89,13 @@ public class PlayerMovement : MonoBehaviour, Interactable
             else { anim.Play("idle");}
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if ((Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.UpArrow)))
         {
-            if (Input.GetKey(KeyCode.A))
+            if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
             {
                 mesh.transform.eulerAngles = new Vector3(0, 315, 0);
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
             {
                 mesh.transform.eulerAngles = new Vector3(0, 45, 0);
 
@@ -105,14 +105,14 @@ public class PlayerMovement : MonoBehaviour, Interactable
                 mesh.transform.eulerAngles = new Vector3(0, 0, 0);
             }
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if ((Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.DownArrow)))
         {
-            if (Input.GetKey(KeyCode.A))
+            if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
             {
                 mesh.transform.eulerAngles = new Vector3(0, 225, 0);
 
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
             {
                 mesh.transform.eulerAngles = new Vector3(0, 135, 0);
 
@@ -123,12 +123,12 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
             }
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
         {
             mesh.transform.eulerAngles = new Vector3(0, 270, 0);
 
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
         {
             mesh.transform.eulerAngles = new Vector3(0, 90, 0);
 
