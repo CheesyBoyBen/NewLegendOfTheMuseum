@@ -27,6 +27,9 @@ public class Enemy : MonoBehaviour
     public float pushTime;
     Vector3 pushVelocity;
 
+    public float stunTime;
+    public float stunTimeMax;
+
     CharacterController ch;
 
     public PlayerMovement playerMovement;
@@ -69,6 +72,10 @@ public class Enemy : MonoBehaviour
 
             if (pushForce < 0) { pushForce = 0; }
             else { pushForce -= Time.deltaTime / 10; }
+        }
+        else if (stunTime >= 0)
+        {
+            stunTime -= Time.deltaTime;
         }
         else if (knockbackTime <= 0)
         {
@@ -195,5 +202,11 @@ public class Enemy : MonoBehaviour
     public void OnPlatform(Vector3 diff)
     {
         ch.Move(diff);
+    }
+
+    public void Stun()
+    {
+        stunTime = stunTimeMax;
+        //Debug.Log("test");
     }
 }

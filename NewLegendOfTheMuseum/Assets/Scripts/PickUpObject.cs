@@ -18,7 +18,7 @@ public class PickUpObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canpickup == true) // if you enter thecollider of the objecct
+        if((canpickup == true) && (ObjectIwantToPickUp != null)) // if you enter thecollider of the objecct
         {
             if (Input.GetKeyDown(KeyCode.E))  // can be e or any key 
             {

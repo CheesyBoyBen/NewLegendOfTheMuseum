@@ -201,6 +201,11 @@ public class PlayerMovement : MonoBehaviour, Interactable
             curPower = 2;
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            curPower = 3;
+        }
+
         if (Input.GetKeyDown(powerKey))
         {
             if (curPower == 1)
@@ -216,7 +221,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
             if (curPower == 3)
             {
-                //Volt Power
+                stun();
             }
         }
         pushCooldown -= Time.deltaTime;
@@ -255,6 +260,17 @@ public class PlayerMovement : MonoBehaviour, Interactable
             pushable.GetComponent<PushableScript>().Push(this.gameObject);
         }
     }
+
+    private void stun()
+    {
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, pushRange, enemyLayers);
+
+        foreach (Collider enemy in hitEnemies)
+        {
+            enemy.GetComponent<Enemy>().Stun();
+        }
+    }
+
     public void Interact()
     {
         var collision = Physics.OverlapSphere(interactPoint.position, interactRange, NPCLayers);
