@@ -65,6 +65,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public Animator anim;
     public GameObject mesh;
 
+    private Rigidbody rb;
+
 
 
 
@@ -74,6 +76,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
         ch = GetComponent<CharacterController>();
         currentHealth = maxHealth;
         curPower = 1;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -89,56 +92,35 @@ public class PlayerMovement : MonoBehaviour, Interactable
             else { anim.Play("idle");}
         }
 
-        if ((Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.UpArrow)))
+        // Get the horizontal and vertical input values
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        // Calculate the camera forward vector
+        Vector3 cameraForward = Camera.main.transform.forward;
+        cameraForward.y = 0f;   // Ignore the camera's vertical rotation
+
+        // Calculate the camera right vector
+        Vector3 cameraRight = Camera.main.transform.right;
+
+        // Calculate the movement direction based on the input values and camera vectors
+        Vector3 direction = (horizontalInput * cameraRight + verticalInput * cameraForward).normalized;
+
+        // Rotate the character towards the movement direction
+        if (direction.magnitude > 0f)
         {
-            if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
-            {
-                mesh.transform.eulerAngles = new Vector3(0, 315, 0);
-            }
-            else if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
-            {
-                mesh.transform.eulerAngles = new Vector3(0, 45, 0);
-
-            }
-            else
-            {
-                mesh.transform.eulerAngles = new Vector3(0, 0, 0);
-            }
-        }
-        else if ((Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.DownArrow)))
-        {
-            if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
-            {
-                mesh.transform.eulerAngles = new Vector3(0, 225, 0);
-
-            }
-            else if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
-            {
-                mesh.transform.eulerAngles = new Vector3(0, 135, 0);
-
-            }
-            else
-            {
-                mesh.transform.eulerAngles = new Vector3(0, 180, 0);
-
-            }
-        }
-        else if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
-        {
-            mesh.transform.eulerAngles = new Vector3(0, 270, 0);
-
-        }
-        else if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
-        {
-            mesh.transform.eulerAngles = new Vector3(0, 90, 0);
-
+            transform.rotation = Quaternion.LookRotation(direction);
         }
 
+        // Move the character in the direction of the input values
+        transform.position += direction * moveSpeed * Time.deltaTime;
 
 
 
-        float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
-        float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
+
+
+        // float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
+        //   float z = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
         if (knockbackTime <= 0)
         {
@@ -153,7 +135,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
                 velocity += gravity * gravityMultiplier * Time.deltaTime;
             }
 
-            ch.Move(new Vector3(x, velocity, z));
+          //  ch.Move(new Vector3(x, velocity, z));
 
             if (Time.time >= nextAttackTime)
             {
