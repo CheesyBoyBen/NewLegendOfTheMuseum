@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01762615, g: 0.032628782, b: 0.10723857, a: 1}
+  m_IndirectSpecularColor: {r: 0.01824565, g: 0.0326414, b: 0.107094385, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5015,7 +5015,10 @@ MonoBehaviour:
   tileObject13: {fileID: 790392327}
   tileObject14: {fileID: 1558333443}
   tileObject15: {fileID: 201924429}
+  arrow: {fileID: 8089564751402847881, guid: 39fd3dfea5ab5bc44841127cf9ce97d3, type: 3}
+  placement: {fileID: 0}
   portal: {fileID: 956811079}
+  arrowSpeed: 0
 --- !u!1 &1411277082
 GameObject:
   m_ObjectHideFlags: 0
