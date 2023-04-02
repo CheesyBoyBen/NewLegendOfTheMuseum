@@ -41,14 +41,21 @@ public class TilePuzzle : MonoBehaviour
     public GameObject tileObject14;
     public GameObject tileObject15;
 
+    public GameObject arrow;
+
+    public GameObject placement;
+
+
     private bool completeBool;
 
     public GameObject portal;
 
+    public float arrowSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        arrowSpeed = 5f;
     }
 
     // Update is called once per frame
@@ -342,6 +349,14 @@ public class TilePuzzle : MonoBehaviour
             tileRenderer.material = tileMat;
             tileRenderer = tileObject15.GetComponent<MeshRenderer>();
             tileRenderer.material = tileMat;
+
+            //arrows
+            Instantiate(arrow, placement.transform.position, arrow.transform.rotation);
+
+            GameObject projectileGO = (GameObject)Instantiate(arrow, transform.position, arrow.transform.rotation);
+
+            Rigidbody projectileRb = projectileGO.GetComponent<Rigidbody>();
+            projectileRb.AddForce(arrowSpeed * Vector3.forward, ForceMode.Impulse);
         }
     }
 
