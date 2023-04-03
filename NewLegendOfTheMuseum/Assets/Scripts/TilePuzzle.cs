@@ -55,7 +55,7 @@ public class TilePuzzle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arrowSpeed = 5f;
+        arrowSpeed = 5f;    
     }
 
     // Update is called once per frame
