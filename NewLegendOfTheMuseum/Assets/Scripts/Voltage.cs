@@ -17,6 +17,10 @@ public class Voltage : MonoBehaviour
 
     public GameObject elevator;
 
+    public GameObject runwayLights;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,9 +45,11 @@ public class Voltage : MonoBehaviour
             oneTime = true; 
         }
 
-        if(ds.DCounter == 3)
+        if (ds.DCounter == 3)
+        {
             elevator.gameObject.SetActive(true);
-
+            runwayLights.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
