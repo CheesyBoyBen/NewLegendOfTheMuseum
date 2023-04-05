@@ -11,7 +11,8 @@ public class MorsePuzzle : MonoBehaviour
     public GameObject dot;
     public GameObject dash;
     public GameObject player;
-    public TextMeshProUGUI TMP;
+    public TextMeshProUGUI TMPEnglish;
+    public TextMeshProUGUI TMPMorse;
     public GameObject portal;
 
 
@@ -24,19 +25,21 @@ public class MorsePuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if ((Input.GetKeyDown(KeyCode.E)) && (morse != sequence))
         {
             if (Vector3.Distance(dot.transform.position, player.transform.position) <= 5f)
             {
                 morse = morse + "0";
                 Debug.Log(morse);
-
+                TMPMorse.text += ".";
             }
 
             if (Vector3.Distance(dash.transform.position, player.transform.position) <= 5f)
             {
                 morse = morse + "1";
                 Debug.Log(morse);
+                TMPMorse.text += "-";
+
             }
         }
 
@@ -51,12 +54,16 @@ public class MorsePuzzle : MonoBehaviour
                     {
                         Debug.Log("D");
                         inputEnglish = "D";
-                        TMP.text = "D";
+                        TMPEnglish.text = "D"; 
+                        TMPMorse.text += " ";
+
                     }
                     else
                     {
                         Debug.Log("incorrect");
                         morse = "";
+                        TMPMorse.text = "";
+
                     }
                 }
             }
@@ -72,13 +79,16 @@ public class MorsePuzzle : MonoBehaviour
                     {
                         Debug.Log("DO");
                         inputEnglish = "DO";
-                        TMP.text = "DO";
+                        TMPEnglish.text = "DO";
+                        TMPMorse.text += " ";
 
                     }
                     else
                     {
                         Debug.Log("incorrect");
                         morse = "100";
+                        TMPMorse.text = "-.. ";
+
                     }
                 }
             }
@@ -94,13 +104,16 @@ public class MorsePuzzle : MonoBehaviour
                     {
                         Debug.Log("DOL");
                         inputEnglish = "DOL";
-                        TMP.text = "DOL";
+                        TMPEnglish.text = "DOL";
+                        TMPMorse.text += " ";
 
                     }
                     else
                     {
                         Debug.Log("incorrect");
                         morse = "100111";
+                        TMPMorse.text = "-.. --- ";
+
                     }
                 }
             }
@@ -116,13 +129,16 @@ public class MorsePuzzle : MonoBehaviour
                     {
                         Debug.Log("DOLL");
                         inputEnglish = "DOLL";
-                        TMP.text = "DOLL";
+                        TMPEnglish.text = "DOLL";
+                        TMPMorse.text += " ";
 
                     }
                     else
                     {
                         Debug.Log("incorrect");
                         morse = "1001110100";
+                        TMPMorse.text = "-.. --- .-.. ";
+
                     }
                 }
             }
@@ -138,13 +154,15 @@ public class MorsePuzzle : MonoBehaviour
                     {
                         Debug.Log("DOLLY");
                         inputEnglish = "DOLLY";
-                        TMP.text = "DOLLY";
+                        TMPEnglish.text = "DOLLY";
 
                     }
                     else
                     {
                         Debug.Log("incorrect");
                         morse = "10011101000100";
+                        TMPMorse.text = "-.. --- .-.. .-.. ";
+
                     }
                 }
             }
@@ -159,12 +177,8 @@ public class MorsePuzzle : MonoBehaviour
                 if (morse == sequence)
                 {
                     puzzleComplete();
-                    morse = "";
-                }
-                else
-                {
-                    Debug.Log("incorrect");
-                    morse = "";
+                    TMPMorse.text = "-.. --- .-.. .-.. -.--";
+
                 }
             }
         }
