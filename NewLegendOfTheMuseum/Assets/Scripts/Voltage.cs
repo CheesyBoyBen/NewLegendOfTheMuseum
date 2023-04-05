@@ -39,7 +39,7 @@ public class Voltage : MonoBehaviour
 
         if (counter > 5)
             counter = 0;
-        if (counter == 3 && !oneTime)
+        if (counter == 5 && !oneTime)
         {
             ds.Add();
             oneTime = true; 

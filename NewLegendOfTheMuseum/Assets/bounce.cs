@@ -28,6 +28,7 @@ public class bounce : MonoBehaviour
             isActive = true;
             StartCoroutine(BounceAnimation());
             cbc.SetActive(false);
+            isActive = false;
 
         }
     }

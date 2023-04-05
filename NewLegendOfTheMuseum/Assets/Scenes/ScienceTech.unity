@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01762615, g: 0.032628782, b: 0.10723857, a: 1}
+  m_IndirectSpecularColor: {r: 0.052087165, g: 0.069961384, b: 0.19818267, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3772,7 +3772,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 654449208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2498817570f22d64e90b637a34b3b6e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ceb48d1819131740baefb36c52c00b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bounceHeight: 1
@@ -10067,7 +10067,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fa2299959b076dc4faadc532f912d87a, type: 2}
+  - {fileID: 2100000, guid: b0b22c8f26f57dd45b8465e58703bf0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
