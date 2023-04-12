@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class SummonerEnemy : MonoBehaviour
 {
     public int damage;
     public float maxHealth;
@@ -162,6 +162,7 @@ public class Enemy : MonoBehaviour
         powImage.transform.localPosition = new Vector3(Random.Range(-200.0f, 200.0f), Random.Range(-150.0f, 50.0f), 150);
 
         currentHealth -= damage;
+        Debug.Log(currentHealth);
 
         healthBar.fillAmount = currentHealth / maxHealth;
 

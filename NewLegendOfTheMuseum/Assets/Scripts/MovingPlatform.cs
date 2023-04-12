@@ -60,7 +60,7 @@ public class MovingPlatform : MonoBehaviour
 
         if (enemy != null)
         {
-            enemy.GetComponent<Enemy>().OnPlatform(posChange);
+            enemy.GetComponent<StingerEnemy>().OnPlatform(posChange);
         }
     }
 

@@ -255,7 +255,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
         foreach (Collider enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().Push(this.gameObject);
+            enemy.GetComponent<StingerEnemy>().Push(this.gameObject);
+            enemy.GetComponent<SummonerEnemy>().Push(this.gameObject);
         }
 
         Collider[] hitPushable = Physics.OverlapSphere(attackPoint.position, pushRange, pushLayers);
@@ -272,7 +273,8 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
         foreach (Collider enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().Stun();
+            enemy.GetComponent<StingerEnemy>().Stun();
+            enemy.GetComponent<SummonerEnemy>().Stun();
         }
     }
 
@@ -295,8 +297,16 @@ public class PlayerMovement : MonoBehaviour, Interactable
     
         foreach(Collider enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            enemy.GetComponent<Enemy>().Knockback(this.gameObject);
+            if (enemy.name == "Grunt Enemy")
+            {
+                enemy.GetComponent<StingerEnemy>().TakeDamage(attackDamage);
+                enemy.GetComponent<StingerEnemy>().Knockback(this.gameObject);
+            }
+            if (enemy.name == "Summoner Enemy")
+            {
+                enemy.GetComponent<SummonerEnemy>().TakeDamage(attackDamage);
+                enemy.GetComponent<SummonerEnemy>().Knockback(this.gameObject);
+            }
         }
 
         audioManager.PlayAudio(attackAudio);
