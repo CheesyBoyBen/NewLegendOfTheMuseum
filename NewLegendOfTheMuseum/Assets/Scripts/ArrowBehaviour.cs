@@ -6,7 +6,7 @@ public class ArrowBehaviour : MonoBehaviour
 {
     private Rigidbody rb;
 
-    public float arrowSpeed = 5f;
+    public float arrowSpeed = 50f;
 
     private PlayerMovement playerMovement;
 
@@ -21,7 +21,13 @@ public class ArrowBehaviour : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(arrowSpeed * Vector3.forward, ForceMode.Impulse);
+        rb.AddForce(arrowSpeed * Vector3.left, ForceMode.Impulse);
+    }
+
+    void Update()
+    {
+
+       
     }
 
     private void OnCollisionEnter(Collision collision)
