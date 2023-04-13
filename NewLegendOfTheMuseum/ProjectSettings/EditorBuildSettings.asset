@@ -33,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Computer2.unity
     guid: b4d57487dc3ee9648bb16b5d63f7d649
   - enabled: 1
-    path: Assets/Scenes/HistoryDungeon.unity
+    path: Assets/Scenes/DungeonMed.unity
     guid: da6c4105d483d18439bd739b0da83fd3
   m_configObjects: {}
