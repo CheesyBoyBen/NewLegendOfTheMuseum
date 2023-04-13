@@ -22,6 +22,8 @@ public class LaserPuzzle : MonoBehaviour
 
     private bool won = false;
 
+    public GameObject redBox;
+
 
     // Update is called once per frame
     void Update()
@@ -260,6 +262,7 @@ public class LaserPuzzle : MonoBehaviour
 
     void WinCondition()
     {
+        redBox.SetActive(false);
         Debug.Log("Puzzle Complete");
     }
 }

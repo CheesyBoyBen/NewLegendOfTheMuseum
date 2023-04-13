@@ -5775,6 +5775,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ffd6822b816c9b428b2295eb5d7fa00, type: 3}
+--- !u!1 &860063267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1481440290192140, guid: 7ffd6822b816c9b428b2295eb5d7fa00, type: 3}
+  m_PrefabInstance: {fileID: 860063266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &860688403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5045363acd680bc4388d80285242b7ba, type: 3}
@@ -7691,6 +7696,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4927059292654576, guid: 7ffd6822b816c9b428b2295eb5d7fa00, type: 3}
   m_PrefabInstance: {fileID: 860063266}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1189282485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860063267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.088474, y: 1, z: 4.5388503}
+  m_Center: {x: -0.45863873, y: 0, z: -0.5467435}
 --- !u!1001 &1200574177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10453,6 +10471,7 @@ MonoBehaviour:
   planet6: {fileID: 638413466}
   planet7: {fileID: 109072615}
   planet8: {fileID: 1720083077}
+  redBox: {fileID: 860063267}
 --- !u!4 &1640922478
 Transform:
   m_ObjectHideFlags: 0
