@@ -40,6 +40,10 @@ public class SummonerEnemy : MonoBehaviour
 
     private float distance;
     public float attackDistance;
+    public float attackCooldown;
+    public float attackCooldownMax;
+
+    public GameObject projectile;
 
     public Animator anim;
 
@@ -97,11 +101,17 @@ public class SummonerEnemy : MonoBehaviour
 
                 if (distance <= attackDistance)
                 {
-                    if (playerMovement.knockbackTime <= 0)
+                    if (attackCooldown <= 0)
                     {
-                        playerMovement.TakeDamage(damage, this.gameObject);
+                        
+                        Attack();
+                        
                         anim.Play("Attack");
                     }
+                }
+                if (attackCooldown >= 0)
+                {
+                    attackCooldown -= Time.deltaTime;
                 }
             }
             else
@@ -209,5 +219,11 @@ public class SummonerEnemy : MonoBehaviour
     {
         stunTime = stunTimeMax;
         //Debug.Log("test");
+    }
+
+    public void Attack()
+    {
+        Instantiate(projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        attackCooldown = attackCooldownMax;
     }
 }
