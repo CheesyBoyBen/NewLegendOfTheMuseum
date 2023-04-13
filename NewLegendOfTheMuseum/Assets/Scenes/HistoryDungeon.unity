@@ -6359,6 +6359,7 @@ MonoBehaviour:
   mat: []
   tileMat: {fileID: 2100000, guid: eefece80334ed15469a0beb7790bf344, type: 2}
   steppedTileMat: {fileID: 2100000, guid: bfd5edede7139404fa8114d3a3b7be9d, type: 2}
+  redTileMat: {fileID: 2100000, guid: 9e1b54cf8cb440945b86510eb60c856b, type: 2}
   tileObject1: {fileID: 1977497668}
   tileObject2: {fileID: 1260934211}
   tileObject3: {fileID: 646401953}
