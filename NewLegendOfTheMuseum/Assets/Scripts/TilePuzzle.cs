@@ -5,6 +5,7 @@ using UnityEngine;
 public class TilePuzzle : MonoBehaviour
 {
     public MeshRenderer tileRenderer;
+    public Material[] mat;
 
     public Material tileMat;
     public Material steppedTileMat;
@@ -78,7 +79,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile1 = true;
                 tileRenderer = tileObject1.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
 
             }
             else
@@ -94,7 +98,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile2 = true;
                 tileRenderer = tileObject2.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -109,7 +116,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile3 = true;
                 tileRenderer = tileObject3.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -124,7 +134,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile4 = true;
                 tileRenderer = tileObject4.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -139,7 +152,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile5 = true;
                 tileRenderer = tileObject5.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -154,7 +170,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile6 = true;
                 tileRenderer = tileObject6.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -169,7 +188,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile7 = true;
                 tileRenderer = tileObject7.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -184,7 +206,13 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile8 = true;
                 tileRenderer = tileObject8.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
+
+                
             }
             else
             {
@@ -199,7 +227,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile9 = true;
                 tileRenderer = tileObject9.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -214,7 +245,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile10 = true;
                 tileRenderer = tileObject10.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -229,7 +263,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile11 = true;
                 tileRenderer = tileObject11.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -244,7 +281,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile12 = true;
                 tileRenderer = tileObject12.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -259,7 +299,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile13 = true;
                 tileRenderer = tileObject13.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -274,7 +317,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile14 = true;
                 tileRenderer = tileObject14.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -289,7 +335,10 @@ public class TilePuzzle : MonoBehaviour
             {
                 tile15 = true;
                 tileRenderer = tileObject15.GetComponent<MeshRenderer>();
-                tileRenderer.material = steppedTileMat;
+                mat = tileRenderer.materials;
+                mat[1] = steppedTileMat;
+
+                tileRenderer.materials = mat;
             }
             else
             {
@@ -320,35 +369,80 @@ public class TilePuzzle : MonoBehaviour
             tile15 = false;
 
             tileRenderer = tileObject1.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject2.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject3.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject4.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject5.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject6.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject7.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject8.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject9.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject10.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject11.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject12.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject13.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject14.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
             tileRenderer = tileObject15.GetComponent<MeshRenderer>();
-            tileRenderer.material = tileMat;
+            mat = tileRenderer.materials;
+            mat[1] = tileMat;
+
+            tileRenderer.materials = mat;
 
             //arrows
             Instantiate(arrow, placement.transform.position, arrow.transform.rotation);
