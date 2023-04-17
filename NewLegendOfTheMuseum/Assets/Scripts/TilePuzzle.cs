@@ -11,6 +11,9 @@ public class TilePuzzle : MonoBehaviour
     public Material steppedTileMat;
     public Material redTileMat;
 
+    public GameObject arrowPrefab;
+    public GameObject[] objectsToSpawnFrom;
+
     private bool tile1 = false;
     private bool tile2 = false;
     private bool tile3 = false;
@@ -43,21 +46,21 @@ public class TilePuzzle : MonoBehaviour
     public GameObject tileObject14;
     public GameObject tileObject15;
 
-    public GameObject arrow;
+  //  public GameObject arrow;
 
-    public GameObject placement;
+ //   public GameObject placement;
 
 
     private bool completeBool;
 
     public GameObject portal;
 
-    public float arrowSpeed;
+   // public float arrowSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        arrowSpeed = 5f;    
+      //  arrowSpeed = 5f;    
     }
 
     // Update is called once per frame
@@ -371,13 +374,12 @@ public class TilePuzzle : MonoBehaviour
 
             StartCoroutine(flashCoroutine());
 
-            //arrows
-            Instantiate(arrow, placement.transform.position, arrow.transform.rotation);
-
-            GameObject projectileGO = (GameObject)Instantiate(arrow, transform.position, arrow.transform.rotation);
-
-            Rigidbody projectileRb = projectileGO.GetComponent<Rigidbody>();
-            projectileRb.AddForce(arrowSpeed * Vector3.forward, ForceMode.Impulse);
+            foreach (GameObject obj in objectsToSpawnFrom)
+            {
+                GameObject arrow = Instantiate(arrowPrefab, obj.transform.position, obj.transform.rotation);
+                arrow.transform.forward = obj.transform.forward.normalized;
+                arrow.GetComponent<Rigidbody>().AddForce(obj.transform.forward * 500f);
+            }
         }
     }
 

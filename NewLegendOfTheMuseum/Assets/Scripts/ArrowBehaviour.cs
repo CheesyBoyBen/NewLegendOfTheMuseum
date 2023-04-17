@@ -13,6 +13,8 @@ public class ArrowBehaviour : MonoBehaviour
     public int damage;
 
     private GameObject player;
+
+    public Vector3 rotationAxis = Vector3.up;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -20,8 +22,9 @@ public class ArrowBehaviour : MonoBehaviour
     }
     void Start()
     {
+        transform.Rotate(rotationAxis, 90f);
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(arrowSpeed * Vector3.left, ForceMode.Impulse);
+      //  rb.AddForce(arrowSpeed * Vector3.forward, ForceMode.Impulse);
     }
 
     void Update()
@@ -30,12 +33,15 @@ public class ArrowBehaviour : MonoBehaviour
        
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            print("hit");
             playerMovement.TakeDamage(damage, this.gameObject);
+            print("hit");
             Destroy(this.gameObject);
+
         }
     }
 }
