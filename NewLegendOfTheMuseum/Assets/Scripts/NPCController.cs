@@ -8,11 +8,62 @@ public class NPCController: MonoBehaviour, Interactable
     [SerializeField] Dialog dialog;
     public GameObject ONLYPHONE;
 
+    public Vector3 targetPos;
+    public Vector3 targetRot;
+    public GameObject cam;
+    private camera camScript;
+    private bool inRadius;
+
+    public bool tempNOTOUCH;
+    public bool tempNOTOUCH2;
+
     // Start is called before the first frame update
-public void Interact()
+    void Start()
     {
+        camScript = cam.GetComponent<camera>();
+        tempNOTOUCH = false;
+        tempNOTOUCH2 = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+            if ((inRadius) && (Input.GetKeyDown(KeyCode.E)))
+            {
+                if (tempNOTOUCH2 == false)
+                {
+                    playerEnter();
+                    tempNOTOUCH2 = true;
+                }
+            }
         
-        StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            inRadius = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            inRadius = false;
+            //playerExit();
+        }
+    }
+    public void Interact()
+    {
+        if (tempNOTOUCH == false)
+        {
+            StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog, this.GetComponent<NPCController>()));
+            tempNOTOUCH = true;
+            tempNOTOUCH2 = false;
+        }
 
         if (ONLYPHONE != null)
         {
@@ -21,5 +72,15 @@ public void Interact()
                 ONLYPHONE.SetActive(true);
             }
         }
+    }
+
+    void playerEnter()
+    {
+        camScript.MoveToPos(targetPos, targetRot);
+    }
+
+    public void playerExit()
+    {
+        camScript.MoveToDefault();
     }
 }

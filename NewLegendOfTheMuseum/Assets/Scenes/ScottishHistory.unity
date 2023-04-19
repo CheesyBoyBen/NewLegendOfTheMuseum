@@ -4265,7 +4265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a877750cbf480f449ddc8028eee617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 4.5
+  Distance: 10
   player: {fileID: 1206950772}
   wallRenderer: {fileID: 268188087}
   wallMat: {fileID: -5567897635444601682, guid: 14ccdc76e0ec80841a5e0bac13fb1a21, type: 3}
@@ -9394,7 +9394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a877750cbf480f449ddc8028eee617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 4.5
+  Distance: 10
   player: {fileID: 1206950772}
   wallRenderer: {fileID: 614713841}
   wallMat: {fileID: -5567897635444601682, guid: 14ccdc76e0ec80841a5e0bac13fb1a21, type: 3}
@@ -16290,7 +16290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a877750cbf480f449ddc8028eee617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 9.11
+  Distance: 10
   player: {fileID: 1206950772}
   wallRenderer: {fileID: 1186687055}
   wallMat: {fileID: -5567897635444601682, guid: 14ccdc76e0ec80841a5e0bac13fb1a21, type: 3}
@@ -16921,7 +16921,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: bf77c9befbb0ab548a9e9636efb2ea42, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf77c9befbb0ab548a9e9636efb2ea42, type: 3}
       propertyPath: m_LocalScale.x
@@ -17974,7 +17974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a877750cbf480f449ddc8028eee617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 4.5
+  Distance: 10
   player: {fileID: 1206950772}
   wallRenderer: {fileID: 1292645537}
   wallMat: {fileID: -5567897635444601682, guid: 14ccdc76e0ec80841a5e0bac13fb1a21, type: 3}
