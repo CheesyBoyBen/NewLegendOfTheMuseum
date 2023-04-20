@@ -164,7 +164,7 @@ MonoBehaviour:
   ONLYPHONE: {fileID: 0}
   targetPos: {x: -12.09, y: 3.18, z: 0.56}
   targetRot: {x: 23.243, y: 45.538, z: 3.014}
-  cam: {fileID: 1414955098}
+  cam: {fileID: 942802823}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
 --- !u!54 &11660650
