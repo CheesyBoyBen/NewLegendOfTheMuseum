@@ -532,6 +532,7 @@ GameObject:
   - component: {fileID: 35737726}
   - component: {fileID: 35737725}
   - component: {fileID: 35737724}
+  - component: {fileID: 35737728}
   m_Layer: 9
   m_Name: NPC (3)
   m_TagString: Untagged
@@ -572,6 +573,11 @@ MonoBehaviour:
     - Looks like this is the aviation area
     - Looks like this is the aviation area
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 1747106824}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &35737725
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -609,6 +615,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35737722}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &35737728
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35737722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.31
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &38072571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4914,6 +4933,7 @@ GameObject:
   - component: {fileID: 327897963}
   - component: {fileID: 327897962}
   - component: {fileID: 327897961}
+  - component: {fileID: 327897966}
   m_Layer: 9
   m_Name: NPC
   m_TagString: Untagged
@@ -4939,6 +4959,11 @@ MonoBehaviour:
     - Looks like this is the aviation area
     - I think i see a fellow dolly inside!
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: -1121, y: 796, z: -765}
+  targetRot: {x: 24, y: 6, z: 0}
+  cam: {fileID: 1747106824}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &327897962
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4984,13 +5009,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327897960}
   m_LocalRotation: {x: -0, y: -0.2588181, z: -0, w: 0.9659261}
-  m_LocalPosition: {x: -1.473, y: 0.07456986, z: -2.444}
+  m_LocalPosition: {x: -1.4730031, y: 0.07456986, z: -2.4440002}
   m_LocalScale: {x: 0.18459682, y: 0.11634743, z: 0.18459682}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 346241866}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
+--- !u!135 &327897966
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327897960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.41
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &328142003
 GameObject:
   m_ObjectHideFlags: 0
@@ -10129,6 +10167,7 @@ GameObject:
   - component: {fileID: 757673560}
   - component: {fileID: 757673559}
   - component: {fileID: 757673558}
+  - component: {fileID: 757673562}
   m_Layer: 9
   m_Name: NPC (1)
   m_TagString: Untagged
@@ -10169,6 +10208,11 @@ MonoBehaviour:
     - A builder needs to build!
     - This plane needs up and running
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 1747106824}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &757673559
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10206,6 +10250,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757673556}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &757673562
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757673556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.76
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &760615172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5cf798772b3f4c748aaed2ac29d76a98, type: 3}
@@ -12425,6 +12482,7 @@ GameObject:
   - component: {fileID: 915999007}
   - component: {fileID: 915999006}
   - component: {fileID: 915999005}
+  - component: {fileID: 915999009}
   m_Layer: 9
   m_Name: NPC (4)
   m_TagString: Untagged
@@ -12465,6 +12523,11 @@ MonoBehaviour:
     - Summer of 33 with my shades on, wind in my fur
     - That was the life
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 1747106824}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &915999006
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12502,6 +12565,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915999003}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &915999009
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915999003}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.54
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &916117890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14825,6 +14901,7 @@ GameObject:
   - component: {fileID: 1102855192}
   - component: {fileID: 1102855191}
   - component: {fileID: 1102855190}
+  - component: {fileID: 1102855194}
   m_Layer: 9
   m_Name: NPC (2)
   m_TagString: Untagged
@@ -14840,7 +14917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102855188}
   m_LocalRotation: {x: -0, y: -0.2588181, z: -0, w: 0.9659261}
-  m_LocalPosition: {x: -2.237, y: 0.07456986, z: -2.366}
+  m_LocalPosition: {x: -2.214, y: 0.07456986, z: -2.845}
   m_LocalScale: {x: 0.18459682, y: 0.11634743, z: 0.18459682}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14865,6 +14942,11 @@ MonoBehaviour:
     - Looks like this is the aviation area
     - Looks like this is the aviation area
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 1747106824}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &1102855191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14902,6 +14984,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102855188}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &1102855194
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102855188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.43
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1106705344
 GameObject:
   m_ObjectHideFlags: 0
@@ -22866,6 +22961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1681424314}
+  tempNOTOUCH: 0
 --- !u!1 &1747525518
 GameObject:
   m_ObjectHideFlags: 0

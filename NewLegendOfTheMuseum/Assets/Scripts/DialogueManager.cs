@@ -54,7 +54,6 @@ public class DialogueManager : MonoBehaviour
                 OnCloseDialog?.Invoke();
                 activeInstance.playerExit();
                 activeInstance.tempNOTOUCH = false;
-                //activeInstance.tempNOTOUCH2 = false;
             }
         }
     }
