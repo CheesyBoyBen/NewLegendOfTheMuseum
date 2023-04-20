@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TMP_Text dialogText;
    [SerializeField] int lettersPerSecond;
 
+    private NPCController activeInstance;
+
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
 
@@ -25,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     int currentLine = 0;
     bool isTyping;
 
-    public IEnumerator ShowDialogue(Dialog dialog)
+    public IEnumerator ShowDialogue(Dialog dialog, NPCController instance)
     {
         yield return new WaitForEndOfFrame();
         OnShowDialog?.Invoke();
@@ -33,6 +35,7 @@ public class DialogueManager : MonoBehaviour
         this.dialog = dialog;
         dialogueBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));
+        activeInstance = instance;
     }
 
     public void HandleUpdate()
@@ -49,6 +52,9 @@ public class DialogueManager : MonoBehaviour
                 currentLine = 0;
                 dialogueBox.SetActive(false);
                 OnCloseDialog?.Invoke();
+                activeInstance.playerExit();
+                activeInstance.tempNOTOUCH = false;
+                //activeInstance.tempNOTOUCH2 = false;
             }
         }
     }

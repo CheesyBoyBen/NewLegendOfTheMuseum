@@ -54,6 +54,7 @@ public class TilePuzzle : MonoBehaviour
     private bool completeBool;
 
     public GameObject portal;
+    public GameObject wall;
 
    // public float arrowSpeed;
 
@@ -389,6 +390,7 @@ public class TilePuzzle : MonoBehaviour
         completeBool = true;
 
         portal.SetActive(true);
+        wall.SetActive(false);
 
     }
 
