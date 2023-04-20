@@ -861,9 +861,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Hello! Welcome to Scottish History!
-    - The world isn't completely ready yet.
-    - Feel free to explore the world anyway!
+    - World Record Attempt for longest waste of time!
+    - Hope you enjoy!
   ONLYPHONE: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   targetRot: {x: 0, y: 0, z: 0}
