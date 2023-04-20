@@ -13,6 +13,8 @@ public class TilePuzzle : MonoBehaviour
 
     public GameObject arrowPrefab;
     public GameObject[] objectsToSpawnFrom;
+    public GameObject player;
+    public Vector3 spawn;
 
     private bool tile1 = false;
     private bool tile2 = false;
@@ -381,6 +383,9 @@ public class TilePuzzle : MonoBehaviour
                 arrow.transform.forward = obj.transform.forward.normalized;
                 arrow.GetComponent<Rigidbody>().AddForce(obj.transform.forward * 500f);
             }
+
+
+
         }
     }
 
@@ -396,6 +401,8 @@ public class TilePuzzle : MonoBehaviour
 
     IEnumerator flashCoroutine()
     {
+        player.GetComponent<CharacterController>().enabled = false;
+
         red();
         yield return new WaitForSeconds(0.5f);
         normal();
@@ -408,6 +415,10 @@ public class TilePuzzle : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         normal();
         yield return new WaitForSeconds(0.5f);
+
+
+        player.transform.position = spawn;
+        player.GetComponent<CharacterController>().enabled = true;
     }
 
     private void normal()

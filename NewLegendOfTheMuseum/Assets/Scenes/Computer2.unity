@@ -321,6 +321,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 394307741}
     - target: {fileID: 3655940268213294188, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
+      propertyPath: spawn.x
+      value: -657.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655940268213294188, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
+      propertyPath: spawn.y
+      value: 31.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655940268213294188, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
+      propertyPath: spawn.z
+      value: 459.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655940268213294188, guid: bbbb46acfdd2c4a4aa979192b34b3cff, type: 3}
       propertyPath: dashTime
       value: 0.2
       objectReference: {fileID: 0}
@@ -1178,6 +1190,11 @@ MonoBehaviour:
     - An 3 valve amplifier AND a loudspeaker?!?!
     - "Wish I could fit my new wheels with one of these (-\u25A0_\u25A0-)"
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &94591999
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1708,6 +1725,11 @@ MonoBehaviour:
     - 'Although, they only transmitted sounds '
     - I wonder what the first call was like?
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &187345536
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1881,6 +1903,11 @@ MonoBehaviour:
     - Its a Sony Walkman WM24 from 1983!
     - Wish I brought my 'Best of 80's rock' cassette
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &274653571
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3146,6 +3173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cf798772b3f4c748aaed2ac29d76a98, type: 3}
+--- !u!23 &525678758 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 5cf798772b3f4c748aaed2ac29d76a98, type: 3}
+  m_PrefabInstance: {fileID: 525678757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &543918790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 01188b335e0d6734daba7213a839fe02, type: 3}
@@ -6259,6 +6291,11 @@ MonoBehaviour:
   TMPEnglish: {fileID: 1169674442}
   TMPMorse: {fileID: 1599562647}
   portal: {fileID: 1772254035}
+  com: {fileID: 525678758}
+  mat: []
+  normal: {fileID: 873432247997174524, guid: de3acb7e970ffae46b780d7f25619da6, type: 3}
+  red: {fileID: 7211448773848044386, guid: 8fb6a46ab05255541b5bcf4741a8820e, type: 3}
+  green: {fileID: 2100000, guid: 6fcc1cd699657cf4482b1a07ba5cc546, type: 2}
 --- !u!4 &1145733231
 Transform:
   m_ObjectHideFlags: 0
@@ -6623,7 +6660,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5691df362c685d74ebb2e08bb177a8ec, type: 2}
+  - {fileID: 2100000, guid: 37da66a781bc848409aec6db460652a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6660,14 +6697,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174947967}
-  m_LocalRotation: {x: -0.014225505, y: 0.70696455, z: -0.7069629, w: -0.014224833}
-  m_LocalPosition: {x: -715.99, y: 33.8, z: 382.99}
-  m_LocalScale: {x: 0.7249739, y: 0.72760105, z: 0.72760105}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -728.66, y: 33.8, z: 348.12}
+  m_LocalScale: {x: 0.43, y: 1, z: 0.55}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 51
-  m_LocalEulerAnglesHint: {x: 90, y: 180, z: -2.3049927}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!4 &1208861111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5cf798772b3f4c748aaed2ac29d76a98, type: 3}
@@ -7293,6 +7330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2089370664}
+  tempNOTOUCH: 0
 --- !u!4 &1368634918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93ad6a8e1c6e79c4694bdfe4c40a6c6b, type: 3}
@@ -7580,6 +7618,11 @@ MonoBehaviour:
     - No selfie cameras?!??!
     - Imagine carrying one of these.
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &1422637482
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10501,6 +10544,7 @@ GameObject:
   - component: {fileID: 1988210237}
   - component: {fileID: 1988210236}
   - component: {fileID: 1988210235}
+  - component: {fileID: 1988210239}
   m_Layer: 9
   m_Name: NPC (2)
   m_TagString: Untagged
@@ -10541,6 +10585,11 @@ MonoBehaviour:
     - So many goodies, though there's that weird poster
     - I can't figuire out what the dots mean
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 1355856182}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &1988210236
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10578,6 +10627,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988210233}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &1988210239
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988210233}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.35
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2017774034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10821,6 +10883,11 @@ MonoBehaviour:
     - I remember doing my homework on these
     - They even have the Apple IBooks
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &2045127864
 Rigidbody:
   m_ObjectHideFlags: 0

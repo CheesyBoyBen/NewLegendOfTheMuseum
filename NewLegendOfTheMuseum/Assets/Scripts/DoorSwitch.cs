@@ -29,5 +29,11 @@ public class DoorSwitch : MonoBehaviour
         DCounter++; 
     }
 
+    public void Subtract()
+    {
+        DCounter--;
+
+    }
+
 
 }

@@ -1046,6 +1046,11 @@ MonoBehaviour:
     - Don't mind me though.
     - ' I''m going to take some cool selfies with my new space camera <3'
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &272114914
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1096,7 +1101,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!1001 &275604817
 PrefabInstance:
@@ -1261,7 +1266,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &280923127
 PrefabInstance:
@@ -2026,6 +2031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1133891018}
+  tempNOTOUCH: 0
 --- !u!1 &347564544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,6 +2289,11 @@ MonoBehaviour:
     lines:
     - Woah! These telescopes can help you fin all sorts of things
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &377780410
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2333,7 +2344,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
 --- !u!1001 &408480129
 PrefabInstance:
@@ -3252,7 +3263,7 @@ Transform:
   - {fileID: 1804899705}
   - {fileID: 2130099977}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &597011057
 PrefabInstance:
@@ -5024,7 +5035,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &908062226
 GameObject:
@@ -5581,6 +5592,11 @@ MonoBehaviour:
     - The Sun has 8 more friends atleast
     - Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &963049253
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5631,7 +5647,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &967079090
 GameObject:
@@ -5671,6 +5687,11 @@ MonoBehaviour:
     - Fancy!
     - Its even signed by George Lowdon of Dundee from 1890
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &967079092
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6489,6 +6510,11 @@ MonoBehaviour:
     - 3..2..1 Lift Of!!!
     - 'Ive only ever seen a Space Launcher on TV  '
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &1095419384
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6539,7 +6565,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!4 &1128341284 stripped
 Transform:
@@ -6658,6 +6684,7 @@ MonoBehaviour:
   audioManager: {fileID: 1767762726}
   anim: {fileID: 1833755373}
   mesh: {fileID: 1833755371}
+  spawn: {x: 3.5, y: -3.53, z: 170.8}
 --- !u!4 &1133891023
 Transform:
   m_ObjectHideFlags: 0
@@ -6675,7 +6702,7 @@ Transform:
   - {fileID: 1833755372}
   - {fileID: 344565057}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1189282484 stripped
 Transform:
@@ -7036,7 +7063,7 @@ RectTransform:
   - {fileID: 962117440}
   - {fileID: 1890039622}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8542,7 +8569,7 @@ Transform:
   - {fileID: 109072620}
   - {fileID: 1720083082}
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657514362
 GameObject:
@@ -8636,7 +8663,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1661868659
 GameObject:
@@ -8679,7 +8706,7 @@ Transform:
   - {fileID: 890720011}
   - {fileID: 1807607434}
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1665757699 stripped
 Transform:
@@ -9480,7 +9507,7 @@ Transform:
   - {fileID: 1128341284}
   - {fileID: 432201148}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1798603111
 GameObject:

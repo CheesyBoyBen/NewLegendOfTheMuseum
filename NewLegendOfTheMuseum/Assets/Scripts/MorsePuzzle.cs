@@ -14,12 +14,20 @@ public class MorsePuzzle : MonoBehaviour
     public TextMeshProUGUI TMPEnglish;
     public TextMeshProUGUI TMPMorse;
     public GameObject portal;
+    public MeshRenderer com;
+    public Material[] mat;
 
+    public Material normal;
+    public Material red;
+    public Material green;
+
+    private bool temp;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        temp = true;
+
     }
 
     // Update is called once per frame
@@ -63,7 +71,7 @@ public class MorsePuzzle : MonoBehaviour
                         Debug.Log("incorrect");
                         morse = "";
                         TMPMorse.text = "";
-
+                        StartCoroutine(flashRed());
                     }
                 }
             }
@@ -88,7 +96,7 @@ public class MorsePuzzle : MonoBehaviour
                         Debug.Log("incorrect");
                         morse = "100";
                         TMPMorse.text = "-.. ";
-
+                        StartCoroutine(flashRed());
                     }
                 }
             }
@@ -113,7 +121,7 @@ public class MorsePuzzle : MonoBehaviour
                         Debug.Log("incorrect");
                         morse = "100111";
                         TMPMorse.text = "-.. --- ";
-
+                        StartCoroutine(flashRed());
                     }
                 }
             }
@@ -138,7 +146,7 @@ public class MorsePuzzle : MonoBehaviour
                         Debug.Log("incorrect");
                         morse = "1001110100";
                         TMPMorse.text = "-.. --- .-.. ";
-
+                        StartCoroutine(flashRed());
                     }
                 }
             }
@@ -162,6 +170,7 @@ public class MorsePuzzle : MonoBehaviour
                         Debug.Log("incorrect");
                         morse = "10011101000100";
                         TMPMorse.text = "-.. --- .-.. .-.. ";
+                        StartCoroutine(flashRed());
 
                     }
                 }
@@ -186,7 +195,66 @@ public class MorsePuzzle : MonoBehaviour
 
     private void puzzleComplete()
     {
-        Debug.Log("puzzle complete");
-        portal.SetActive(true);
+        if (temp == true)
+        {
+            Debug.Log("puzzle complete");
+            portal.SetActive(true);
+            StartCoroutine(flashGreen());
+            temp = false;
+        }
+    }
+
+    IEnumerator flashRed()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        mat = com.materials;
+        mat[1] = red;
+        com.materials = mat;
+
+        yield return new WaitForSeconds(0.5f);
+
+        mat = com.materials;
+        mat[1] = normal;
+        com.materials = mat;
+    }
+
+    IEnumerator flashGreen()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        mat = com.materials;
+        mat[1] = green;
+        com.materials = mat;
+
+        yield return new WaitForSeconds(0.5f);
+
+        mat = com.materials;
+        mat[1] = normal;
+        com.materials = mat;
+
+        yield return new WaitForSeconds(0.5f);
+
+        mat = com.materials;
+        mat[1] = green;
+        com.materials = mat;
+
+        yield return new WaitForSeconds(0.5f);
+
+        mat = com.materials;
+        mat[1] = normal;
+        com.materials = mat;
+
+        yield return new WaitForSeconds(0.5f);
+
+        mat = com.materials;
+        mat[1] = green;
+        com.materials = mat;
+
+        yield return new WaitForSeconds(0.5f);
+
+        mat = com.materials;
+        mat[1] = normal;
+        com.materials = mat;
     }
 }

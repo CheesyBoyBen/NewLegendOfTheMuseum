@@ -38,7 +38,11 @@ public class Voltage : MonoBehaviour
         }
 
         if (counter > 5)
+        {
             counter = 0;
+            ds.Subtract();
+            oneTime = false;
+        }
         if (counter == 5 && !oneTime)
         {
             ds.Add();

@@ -865,6 +865,11 @@ MonoBehaviour:
     - The world isn't completely ready yet.
     - Feel free to explore the world anyway!
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &62101722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13907,6 +13912,11 @@ MonoBehaviour:
     - This would have rung every hour of the day!
     - Speaking of which... when is lunch time...
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &960852073
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16781,6 +16791,7 @@ MonoBehaviour:
   audioManager: {fileID: 1907935429}
   anim: {fileID: 1042279259}
   mesh: {fileID: 1042279257}
+  spawn: {x: 146.6, y: 799.7, z: -1810.81}
 --- !u!4 &1206950777
 Transform:
   m_ObjectHideFlags: 0
@@ -17688,6 +17699,11 @@ MonoBehaviour:
     - Oh wow! the Carronade, six pounder cannon!
     - Looks a lot heavier than 6 pounds to me... no offence Mr. Cannon!
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &1257247652
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28108,6 +28124,11 @@ MonoBehaviour:
     - Aha! You'll never get into the castle you foolish sheep!
     - I have destroyed the lever so you have no way of getting through!
   ONLYPHONE: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &2028011798
 Rigidbody:
   m_ObjectHideFlags: 0

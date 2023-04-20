@@ -637,6 +637,7 @@ MonoBehaviour:
   audioManager: {fileID: 452453709}
   anim: {fileID: 817034750}
   mesh: {fileID: 817034748}
+  spawn: {x: 11.32, y: -1.97, z: -170.28}
 --- !u!4 &653617812
 Transform:
   m_ObjectHideFlags: 0

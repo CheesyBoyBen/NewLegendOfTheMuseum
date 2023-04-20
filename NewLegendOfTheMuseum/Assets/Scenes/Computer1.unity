@@ -534,6 +534,7 @@ MonoBehaviour:
   audioManager: {fileID: 928726777}
   anim: {fileID: 273566806}
   mesh: {fileID: 273566804}
+  spawn: {x: -658.01, y: 33.43, z: 365.61}
 --- !u!4 &443340762
 Transform:
   m_ObjectHideFlags: 0
@@ -2275,6 +2276,11 @@ MonoBehaviour:
     - What's through the portal?
     - This better not be a scam call
   ONLYPHONE: {fileID: 473412863}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tempNOTOUCH: 0
+  tempNOTOUCH2: 0
 --- !u!54 &1489005909
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
     private Rigidbody rb;
 
-
+    public Vector3 spawn;
 
 
     // Start is called before the first frame update
@@ -82,6 +82,9 @@ public class PlayerMovement : MonoBehaviour, Interactable
     // Update is called once per frame
     public void HandleUpdate()
     {
+        if (transform.position.y < -50) { Die(); }
+
+
         if (!(anim.GetCurrentAnimatorStateInfo(0).IsName("spin")))
         {
             if ((Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.UpArrow)) || (Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.DownArrow)) || (Input.GetKey(KeyCode.RightArrow)))
@@ -329,7 +332,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
 
         if (currentHealth <= 0)
         {
-            Debug.Log("Player died!");
+            Die();
         }
 
         Knockback(enemy);
@@ -354,5 +357,12 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public void OnPlatform(Vector3 diff)
     {
         ch.Move(diff);        
+    }
+
+    public void Die()
+    {
+        this.GetComponent<CharacterController>().enabled = false;
+        transform.position = spawn;
+        this.GetComponent<CharacterController>().enabled = true;
     }
 }

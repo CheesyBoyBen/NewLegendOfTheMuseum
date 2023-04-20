@@ -2669,7 +2669,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: 0, y: 0.0021817698, z: -0.000000007450581}
 --- !u!4 &462525060 stripped
 Transform:
@@ -2998,7 +2998,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: -2.3283064e-10, y: 0.0021817698, z: -0.000000007450581}
 --- !u!1 &569695732 stripped
 GameObject:
@@ -3385,6 +3385,7 @@ MonoBehaviour:
   audioManager: {fileID: 452453709}
   anim: {fileID: 817034750}
   mesh: {fileID: 817034748}
+  spawn: {x: 11.32, y: -5.68, z: -114.7}
 --- !u!4 &653617812
 Transform:
   m_ObjectHideFlags: 0
@@ -4006,7 +4007,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: -9.313226e-10, y: 0.0021817698, z: 0}
 --- !u!1001 &792189558
 PrefabInstance:
@@ -4118,7 +4119,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: 0, y: 0.0021817698, z: 0}
 --- !u!1 &849164234
 GameObject:
@@ -5168,7 +5169,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: -0.0000000037252903, y: 0.0021817698, z: -0.000000007450581}
 --- !u!1 &1047374255
 GameObject:
@@ -5368,7 +5369,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: 0, y: 0.0021817698, z: 0}
 --- !u!1 &1112447331
 GameObject:
@@ -5851,7 +5852,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: 0, y: 0.0021817698, z: -0.000000007450581}
 --- !u!1 &1304036461 stripped
 GameObject:
@@ -5887,7 +5888,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: 0, y: 0.0021817326, z: -0.000000007450581}
 --- !u!1001 &1316789318
 PrefabInstance:
@@ -6447,11 +6448,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileRenderer: {fileID: 0}
   mat: []
-  tileMat: {fileID: 8039567086963658369, guid: 31ba72569f902554c999337fd1559969, type: 3}
+  tileMat: {fileID: 2100000, guid: eefece80334ed15469a0beb7790bf344, type: 2}
   steppedTileMat: {fileID: 2100000, guid: bfd5edede7139404fa8114d3a3b7be9d, type: 2}
   redTileMat: {fileID: 2100000, guid: 9e1b54cf8cb440945b86510eb60c856b, type: 2}
   arrowPrefab: {fileID: 3794253989571963828, guid: 84303eebe2b44dc48a70cac7ee8faf5e, type: 3}
   objectsToSpawnFrom: []
+  player: {fileID: 653617807}
+  spawn: {x: 11, y: -5, z: -86}
   tileObject1: {fileID: 1304036461}
   tileObject2: {fileID: 262191909}
   tileObject3: {fileID: 4750215}
@@ -6794,7 +6797,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: -0.0000000037252903, y: 0.0021817698, z: 0}
 --- !u!4 &1461144154 stripped
 Transform:
@@ -6825,7 +6828,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: -2.3283064e-10, y: 0.0021817698, z: 0}
 --- !u!1 &1507848727
 GameObject:
@@ -7202,7 +7205,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: -2.3283064e-10, y: 0.0021817698, z: 0}
 --- !u!1 &1572540805
 GameObject:
@@ -7327,7 +7330,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: -0.0000000037252903, y: 0.0021817698, z: 0}
 --- !u!1 &1602342592
 GameObject:
@@ -8643,7 +8646,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: 0, y: 0.0021817698, z: 0}
 --- !u!1001 &1947414102
 PrefabInstance:
@@ -9452,7 +9455,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: -9.313226e-10, y: 0.0021817698, z: 0}
 --- !u!1001 &2115029001
 PrefabInstance:
@@ -9703,7 +9706,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.1, z: 0.009999999}
+  m_Size: {x: 0.008, y: 0.1, z: 0.008}
   m_Center: {x: -2.3283064e-10, y: 0.0021817698, z: 0}
 --- !u!4 &7697420281102378
 Transform:
