@@ -12,7 +12,10 @@ public class bounce : MonoBehaviour
 
     public int counter = 0;
 
-    public GameObject cbc; //charge box cover
+    public Voltage volt1;
+    public Voltage volt2;
+    public Voltage volt3;
+
 
     private void Start()
     {
@@ -27,8 +30,10 @@ public class bounce : MonoBehaviour
         {
             isActive = true;
             StartCoroutine(BounceAnimation());
-            cbc.SetActive(false);
             isActive = false;
+            volt1.planeBuilt = true;
+            volt2.planeBuilt = true;
+            volt3.planeBuilt = true;
 
         }
     }

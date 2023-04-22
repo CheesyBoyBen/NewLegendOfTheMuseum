@@ -11,8 +11,6 @@ public class TilePuzzle : MonoBehaviour
     public Material steppedTileMat;
     public Material redTileMat;
 
-    public GameObject arrowPrefab;
-    public GameObject[] objectsToSpawnFrom;
     public GameObject player;
     public Vector3 spawn;
 
@@ -376,15 +374,6 @@ public class TilePuzzle : MonoBehaviour
             tile15 = false;
 
             StartCoroutine(flashCoroutine());
-
-            foreach (GameObject obj in objectsToSpawnFrom)
-            {
-                GameObject arrow = Instantiate(arrowPrefab, obj.transform.position, obj.transform.rotation);
-                arrow.transform.forward = obj.transform.forward.normalized;
-                arrow.GetComponent<Rigidbody>().AddForce(obj.transform.forward * 500f);
-            }
-
-
 
         }
     }

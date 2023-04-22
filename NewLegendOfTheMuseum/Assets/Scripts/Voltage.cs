@@ -19,6 +19,12 @@ public class Voltage : MonoBehaviour
 
     public GameObject runwayLights;
 
+    public bool planeBuilt;
+
+    public GameObject player;
+
+    public GameObject cockpit;
+
 
 
     // Start is called before the first frame update
@@ -26,33 +32,38 @@ public class Voltage : MonoBehaviour
     {
         canAdd = false;
         counter = 0;
+        planeBuilt = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         Text.text = counter.ToString();
-        if (Input.GetKeyDown(KeyCode.E) && canAdd == true)
+        if (planeBuilt)
         {
-            counter++;
-        }
+            if (Input.GetKeyDown(KeyCode.E) && canAdd == true)
+            {
+                counter++;
+            }
 
-        if (counter > 5)
-        {
-            counter = 0;
-            ds.Subtract();
-            oneTime = false;
-        }
-        if (counter == 5 && !oneTime)
-        {
-            ds.Add();
-            oneTime = true; 
-        }
+            if (counter > 5)
+            {
+                counter = 0;
+                ds.Subtract();
+                oneTime = false;
+            }
+            if (counter == 5 && !oneTime)
+            {
+                ds.Add();
+                oneTime = true;
+            }
 
-        if (ds.DCounter == 3)
-        {
-            elevator.gameObject.SetActive(true);
-            runwayLights.SetActive(true);
+            if (ds.DCounter == 3)
+            {
+                elevator.gameObject.SetActive(true);
+                runwayLights.SetActive(true);
+                player.transform.position = cockpit.transform.position;
+            }
         }
     }
 
