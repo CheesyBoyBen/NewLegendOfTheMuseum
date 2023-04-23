@@ -62,8 +62,8 @@ public class MorsePuzzle : MonoBehaviour
                     {
                         Debug.Log("D");
                         inputEnglish = "D";
-                        TMPEnglish.text = "D"; 
-                        TMPMorse.text += " ";
+                        TMPEnglish.text = "D";
+                        TMPMorse.text = "";
 
                     }
                     else
@@ -88,14 +88,14 @@ public class MorsePuzzle : MonoBehaviour
                         Debug.Log("DO");
                         inputEnglish = "DO";
                         TMPEnglish.text = "DO";
-                        TMPMorse.text += " ";
+                        TMPMorse.text = "";
 
                     }
                     else
                     {
                         Debug.Log("incorrect");
                         morse = "100";
-                        TMPMorse.text = "-.. ";
+                        TMPMorse.text = "";
                         StartCoroutine(flashRed());
                     }
                 }
@@ -113,14 +113,14 @@ public class MorsePuzzle : MonoBehaviour
                         Debug.Log("DOL");
                         inputEnglish = "DOL";
                         TMPEnglish.text = "DOL";
-                        TMPMorse.text += " ";
+                        TMPMorse.text = "";
 
                     }
                     else
                     {
                         Debug.Log("incorrect");
                         morse = "100111";
-                        TMPMorse.text = "-.. --- ";
+                        TMPMorse.text = "";
                         StartCoroutine(flashRed());
                     }
                 }
@@ -138,14 +138,14 @@ public class MorsePuzzle : MonoBehaviour
                         Debug.Log("DOLL");
                         inputEnglish = "DOLL";
                         TMPEnglish.text = "DOLL";
-                        TMPMorse.text += " ";
+                        TMPMorse.text = "";
 
                     }
                     else
                     {
                         Debug.Log("incorrect");
                         morse = "1001110100";
-                        TMPMorse.text = "-.. --- .-.. ";
+                        TMPMorse.text = "";
                         StartCoroutine(flashRed());
                     }
                 }
@@ -169,7 +169,7 @@ public class MorsePuzzle : MonoBehaviour
                     {
                         Debug.Log("incorrect");
                         morse = "10011101000100";
-                        TMPMorse.text = "-.. --- .-.. .-.. ";
+                        TMPMorse.text = "";
                         StartCoroutine(flashRed());
 
                     }
@@ -186,6 +186,7 @@ public class MorsePuzzle : MonoBehaviour
                 if (morse == sequence)
                 {
                     puzzleComplete();
+                    TMPMorse.fontSize = 1;
                     TMPMorse.text = "-.. --- .-.. .-.. -.--";
 
                 }

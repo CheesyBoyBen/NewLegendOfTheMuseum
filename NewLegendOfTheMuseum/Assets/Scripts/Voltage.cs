@@ -62,7 +62,12 @@ public class Voltage : MonoBehaviour
             {
                 elevator.gameObject.SetActive(true);
                 runwayLights.SetActive(true);
+                
+                player.GetComponent<CharacterController>().enabled = false;
+
                 player.transform.position = cockpit.transform.position;
+
+                //player.GetComponent<CharacterController>().enabled = true;
             }
         }
     }
