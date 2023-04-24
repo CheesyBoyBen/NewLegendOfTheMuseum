@@ -5641,7 +5641,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996395730}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6523,6 +6523,7 @@ MonoBehaviour:
   anim: {fileID: 1833755373}
   mesh: {fileID: 1833755371}
   spawn: {x: 3.5, y: -3.53, z: 170.8}
+  artifactCheck: 0
 --- !u!4 &1133891023
 Transform:
   m_ObjectHideFlags: 0
@@ -11633,19 +11634,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: be1647f25251c594eba75e174eec90f3, type: 3}
   m_PrefabInstance: {fileID: 1547155249}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2008840482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008840481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad8a50aa61a2a542addabf04ae168c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portal: {fileID: 1353430495}
 --- !u!122 &2008840483
 Halo:
   m_ObjectHideFlags: 0
@@ -11672,6 +11660,20 @@ CapsuleCollider:
   m_Height: 1.384831
   m_Direction: 1
   m_Center: {x: -0.011017561, y: -0.1653103, z: 0.17812285}
+--- !u!114 &2008840488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008840481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b61fcfa3992ccb4990dabc777dcb9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portal: {fileID: 1353430495}
+  pm: {fileID: 1133891022}
 --- !u!1001 &2036126297
 PrefabInstance:
   m_ObjectHideFlags: 0

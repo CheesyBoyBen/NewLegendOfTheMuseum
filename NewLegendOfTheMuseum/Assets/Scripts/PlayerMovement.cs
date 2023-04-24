@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour, Interactable
 {
@@ -70,6 +71,11 @@ public class PlayerMovement : MonoBehaviour, Interactable
     public Vector3 spawn;
 
 
+    public static int artifactCount = 0;
+
+    public bool artifactCheck = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,13 +83,24 @@ public class PlayerMovement : MonoBehaviour, Interactable
         currentHealth = maxHealth;
         curPower = 1;
         rb = GetComponent<Rigidbody>();
+        print(artifactCount);
     }
+
+    public void ArtifactAdd()
+    {
+        artifactCount++;
+    }
+
+
 
     // Update is called once per frame
     public void HandleUpdate()
     {
-        if (transform.position.y < -50) { Die(); }
 
+        if (artifactCount == 2) { artifactCheck = true; }
+
+
+        if (transform.position.y < -50) { Die(); }
 
         if (!(anim.GetCurrentAnimatorStateInfo(0).IsName("spin")))
         {

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Artifact : MonoBehaviour
+public class ArtifactLeft : MonoBehaviour
 {
-
+    // Start is called before the first frame update
     public GameObject portal;
 
     public PlayerMovement pm;
@@ -14,17 +14,17 @@ public class Artifact : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider collision)
     {
-            portal.SetActive(true);
-            collected = true;
-            pm.ArtifactAdd();
-            Destroy(this.gameObject);
+        portal.SetActive(true);
+        collected = true;
+        pm.ArtifactAdd();
+        Destroy(this.gameObject);
 
-        
+
     }
 
     private void Update()
