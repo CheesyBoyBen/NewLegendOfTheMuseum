@@ -165,7 +165,7 @@ public class LaserPuzzle : MonoBehaviour
     void CheckRotations()
     {
 
-        if (satellite.GetComponent<LineRenderer>().enabled)
+        if (satellite.activeSelf == true)
         {
             sun.GetComponent<LineRenderer>().enabled = true;
         }
