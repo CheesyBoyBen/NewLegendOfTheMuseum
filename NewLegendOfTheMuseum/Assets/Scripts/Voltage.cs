@@ -32,6 +32,8 @@ public class Voltage : MonoBehaviour
 
     private float elapsedTime;
 
+    public FadeToBlackWithAudio ftbwa;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,7 +72,7 @@ public class Voltage : MonoBehaviour
                 elevator.gameObject.SetActive(true);
                 runwayLights.SetActive(true);
                 
-               player.GetComponent<CharacterController>().enabled = false;
+              player.GetComponent<CharacterController>().enabled = false;
 
                 player.transform.position = cockpit.transform.position;
 
@@ -94,9 +96,10 @@ public class Voltage : MonoBehaviour
     private IEnumerator TakeOff()
     {
 
-        
+        ftbwa.StartCoroutine(ftbwa.PlayAudioAndFadeOut());
 
-        yield return new WaitForSeconds(5f);
+
+        yield return new WaitForSeconds(7f);
 
         SceneManager.LoadScene("Computer2");
 
