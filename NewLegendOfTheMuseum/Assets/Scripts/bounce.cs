@@ -10,6 +10,8 @@ public class bounce : MonoBehaviour
     private bool isActive = false;      // A flag indicating whether the object is active
     private Vector3 initialPosition;  // The initial position of the object
 
+    private bool oneTime = false;
+
     public int counter = 0;
 
     public Voltage volt1;
@@ -26,14 +28,16 @@ public class bounce : MonoBehaviour
     private void Update()
     {
         // If the object becomes active, start the bounce animation
-        if (!isActive && gameObject.activeSelf  && counter == 3)
+        if (!isActive && gameObject.activeSelf  && counter == 3  && !oneTime)
         {
+
             isActive = true;
             StartCoroutine(BounceAnimation());
             isActive = false;
             volt1.planeBuilt = true;
             volt2.planeBuilt = true;
             volt3.planeBuilt = true;
+            oneTime = true;
 
         }
     }
