@@ -203,7 +203,7 @@ public class MorsePuzzle : MonoBehaviour
         if (temp == true)
         {
             Debug.Log("puzzle complete");
-            portal.SetActive(true);
+            //portal.SetActive(true);
             StartCoroutine(flashGreen());
             temp = false;
             door1.transform.localEulerAngles = new Vector3(door1.transform.localEulerAngles.x, 90, door1.transform.localEulerAngles.z);

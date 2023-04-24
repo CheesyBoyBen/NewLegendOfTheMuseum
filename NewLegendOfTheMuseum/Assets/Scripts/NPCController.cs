@@ -53,7 +53,6 @@ public class NPCController: MonoBehaviour, Interactable
         if (other.tag == "Player")
         {
             inRadius = false;
-            //playerExit();
         }
     }
     public void Interact()
