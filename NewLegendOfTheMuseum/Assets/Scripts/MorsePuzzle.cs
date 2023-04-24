@@ -23,6 +23,10 @@ public class MorsePuzzle : MonoBehaviour
 
     private bool temp;
 
+    public GameObject door1;
+    public GameObject door2;
+    public GameObject doorLight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -202,6 +206,9 @@ public class MorsePuzzle : MonoBehaviour
             portal.SetActive(true);
             StartCoroutine(flashGreen());
             temp = false;
+            door1.transform.localEulerAngles = new Vector3(door1.transform.localEulerAngles.x, 90, door1.transform.localEulerAngles.z);
+            door2.transform.localEulerAngles = new Vector3(door2.transform.localEulerAngles.x, -45, door2.transform.localEulerAngles.z);
+            doorLight.GetComponent<Light>().color = Color.green;
         }
     }
 

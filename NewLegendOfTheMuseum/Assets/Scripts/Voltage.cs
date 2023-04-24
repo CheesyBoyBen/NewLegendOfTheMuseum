@@ -67,7 +67,6 @@ public class Voltage : MonoBehaviour
 
                 player.transform.position = cockpit.transform.position;
 
-                //player.GetComponent<CharacterController>().enabled = true;
             }
         }
     }
