@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Voltage : MonoBehaviour
@@ -25,7 +26,11 @@ public class Voltage : MonoBehaviour
 
     public GameObject cockpit;
 
+    public GameObject plane;
 
+    public Transform takeoff;
+
+    private float elapsedTime;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +43,8 @@ public class Voltage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        elapsedTime += Time.deltaTime;
         Text.text = counter.ToString();
         if (planeBuilt)
         {
@@ -63,9 +70,13 @@ public class Voltage : MonoBehaviour
                 elevator.gameObject.SetActive(true);
                 runwayLights.SetActive(true);
                 
-                player.GetComponent<CharacterController>().enabled = false;
+               player.GetComponent<CharacterController>().enabled = false;
 
                 player.transform.position = cockpit.transform.position;
+
+                player.transform.SetParent(plane.transform);
+
+                StartCoroutine(TakeOff());
 
             }
         }
@@ -75,11 +86,22 @@ public class Voltage : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            canAdd = true;  
+            canAdd = true;
 
         }
     }
 
+    private IEnumerator TakeOff()
+    {
+
+        
+
+        yield return new WaitForSeconds(5f);
+
+        SceneManager.LoadScene("Computer2");
+
+
+    }
     private void OnTriggerExit(Collider other)
     {
         canAdd = false;
