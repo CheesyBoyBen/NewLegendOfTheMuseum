@@ -184,7 +184,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    Attack();
+                    //Attack();
                     nextAttackTime = Time.time + 1f / attackRate;
                 }
             }

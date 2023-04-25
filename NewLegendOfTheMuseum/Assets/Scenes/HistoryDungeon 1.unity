@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.052087165, g: 0.069961384, b: 0.19818267, a: 1}
+  m_IndirectSpecularColor: {r: 0.051960297, g: 0.06971559, b: 0.19847813, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3188,6 +3188,7 @@ MonoBehaviour:
   anim: {fileID: 817034750}
   mesh: {fileID: 817034748}
   spawn: {x: 11.32, y: -5.68, z: -114.7}
+  artifactCheck: 0
 --- !u!4 &653617812
 Transform:
   m_ObjectHideFlags: 0
@@ -5990,6 +5991,7 @@ MonoBehaviour:
   steppedTileMat: {fileID: 2100000, guid: bfd5edede7139404fa8114d3a3b7be9d, type: 2}
   redTileMat: {fileID: 2100000, guid: 9e1b54cf8cb440945b86510eb60c856b, type: 2}
   player: {fileID: 653617807}
+  door: {fileID: 749947462708832094}
   spawn: {x: 11, y: -5, z: -86}
   tileObject1: {fileID: 1304036461}
   tileObject2: {fileID: 262191909}
@@ -9690,6 +9692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4076833350622290264}
+  - component: {fileID: 4076833350622290265}
   m_Layer: 0
   m_Name: Cube.042
   m_TagString: Untagged
@@ -10357,7 +10360,7 @@ GameObject:
   - component: {fileID: 1620169054070424689}
   - component: {fileID: 2024332814352481158}
   m_Layer: 0
-  m_Name: polySurface64
+  m_Name: DungeonLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10816,7 +10819,7 @@ GameObject:
   - component: {fileID: 8054170894408880557}
   - component: {fileID: 8349711826947985553}
   m_Layer: 0
-  m_Name: polySurface63
+  m_Name: DungeonRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12056,6 +12059,21 @@ Transform:
   m_Father: {fileID: 7504310373400501735}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4076833350622290265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749947462708832094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbbddcc6cc887b4c96dc76d3e7fc849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  left: {fileID: 1568163058210861896}
+  right: {fileID: 2149919329622250184}
 --- !u!4 &4108012122465462694
 Transform:
   m_ObjectHideFlags: 0
@@ -12917,7 +12935,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2149919329622250184}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.440892e-18, y: 0.012200359, z: 0.123234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14707,7 +14725,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568163058210861896}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.947598e-16, y: -0.2561357, z: 0.1344631}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
