@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/IntroVideo.unity
+    guid: a57db2e80bd51e44e90f64fef28076af
   m_configObjects: {}

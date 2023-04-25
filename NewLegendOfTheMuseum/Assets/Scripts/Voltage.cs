@@ -99,7 +99,7 @@ public class Voltage : MonoBehaviour
         ftbwa.StartCoroutine(ftbwa.PlayAudioAndFadeOut());
 
 
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(4f);
 
         SceneManager.LoadScene("Computer2");
 
