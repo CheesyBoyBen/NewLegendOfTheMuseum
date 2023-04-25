@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.051960297, g: 0.06971559, b: 0.19847813, a: 1}
+  m_IndirectSpecularColor: {r: 0.052087165, g: 0.069961384, b: 0.19818267, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1199,8 +1199,6 @@ MonoBehaviour:
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!54 &94591999
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1741,8 +1739,6 @@ MonoBehaviour:
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!54 &187345536
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1921,8 +1917,6 @@ MonoBehaviour:
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!54 &274653571
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4698,24 +4692,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5909517595042860586, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 823374342}
     - target: {fileID: 5909517595042860587, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
     - target: {fileID: 5909517595042860587, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5909517595042860591, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 02822cc1ab2d75b429ed4c4b9df7bfae, type: 3}
-    m_RemovedComponents:
-    - {fileID: 5909517595042860584, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
 --- !u!114 &823374341 stripped
 MonoBehaviour:
@@ -4728,11 +4717,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84ebc3deb6ecc24abb9ddd484397c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &823374342 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5909517595042860591, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
-  m_PrefabInstance: {fileID: 823374340}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &825020810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f78de412754bc554284ed59b47c32ebd, type: 3}
@@ -7696,8 +7680,6 @@ MonoBehaviour:
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!54 &1422637482
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10618,8 +10600,6 @@ MonoBehaviour:
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!54 &1988210236
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10918,8 +10898,6 @@ MonoBehaviour:
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!54 &2045127864
 Rigidbody:
   m_ObjectHideFlags: 0
