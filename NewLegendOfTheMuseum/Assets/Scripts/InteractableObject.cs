@@ -27,7 +27,7 @@ public class InteractableObject : MonoBehaviour
         transform.LookAt(playerCamera.transform);
 
 
-        if (Vector3.Distance(transform.position, player.transform.position) <= minDist)
+        if ((Vector3.Distance(transform.position, player.transform.position) <= minDist) && (playerCamera.transform.parent != null))
         {
             image.enabled = true;
             time += Time.deltaTime * speed;
