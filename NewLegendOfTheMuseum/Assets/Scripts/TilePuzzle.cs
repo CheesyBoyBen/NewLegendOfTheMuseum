@@ -12,6 +12,7 @@ public class TilePuzzle : MonoBehaviour
     public Material redTileMat;
 
     public GameObject player;
+    public GameObject door;
     public Vector3 spawn;
 
     private bool tile1 = false;
@@ -384,6 +385,7 @@ public class TilePuzzle : MonoBehaviour
 
         portal.SetActive(true);
         wall.SetActive(false);
+        door.GetComponent<opendoor>().open();
 
     }
 

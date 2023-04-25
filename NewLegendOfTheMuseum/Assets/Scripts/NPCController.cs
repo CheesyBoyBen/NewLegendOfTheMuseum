@@ -17,6 +17,9 @@ public class NPCController: MonoBehaviour, Interactable
     public bool tempNOTOUCH;
     public bool tempNOTOUCH2;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +79,11 @@ public class NPCController: MonoBehaviour, Interactable
     void playerEnter()
     {
         camScript.MoveToPos(targetPos, targetRot);
+
+        if ((audioSource != null) && (audioClip != null)) {
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
     }
 
     public void playerExit()
