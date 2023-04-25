@@ -31,7 +31,6 @@ public class camera : MonoBehaviour
             transform.parent = null;
             transform.localPosition = pos;
             transform.localEulerAngles = rot;
-            Debug.Log("test");
         
     }
 

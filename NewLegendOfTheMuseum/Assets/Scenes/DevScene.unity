@@ -937,6 +937,7 @@ MonoBehaviour:
   cockpit: {fileID: 0}
   plane: {fileID: 0}
   takeoff: {fileID: 0}
+  ftbwa: {fileID: 0}
 --- !u!65 &145766772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2963,6 +2964,7 @@ MonoBehaviour:
   cockpit: {fileID: 0}
   plane: {fileID: 0}
   takeoff: {fileID: 0}
+  ftbwa: {fileID: 0}
 --- !u!65 &432417917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3291,8 +3293,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3490,6 +3492,7 @@ MonoBehaviour:
   cockpit: {fileID: 0}
   plane: {fileID: 0}
   takeoff: {fileID: 0}
+  ftbwa: {fileID: 0}
 --- !u!54 &538049500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3575,6 +3578,8 @@ MonoBehaviour:
   cam: {fileID: 0}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!54 &540055166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8484,6 +8489,7 @@ MonoBehaviour:
   cockpit: {fileID: 0}
   plane: {fileID: 0}
   takeoff: {fileID: 0}
+  ftbwa: {fileID: 0}
 --- !u!65 &1480449651
 BoxCollider:
   m_ObjectHideFlags: 0
