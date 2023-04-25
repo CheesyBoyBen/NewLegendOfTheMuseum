@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator TypeDialog(string line)
     {
         isTyping = true;
-        dialogText.text = " ";
+        dialogText.text = "";
         foreach (var letter in line.ToCharArray())
         {
             dialogText.text += letter;
