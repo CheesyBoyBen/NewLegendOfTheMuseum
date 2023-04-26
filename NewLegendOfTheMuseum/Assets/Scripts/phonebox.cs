@@ -41,6 +41,6 @@ public class phonebox : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
 
-        SceneManager.LoadScene("Space");
+        SceneManager.LoadScene("HUBArea");
     }
 }
