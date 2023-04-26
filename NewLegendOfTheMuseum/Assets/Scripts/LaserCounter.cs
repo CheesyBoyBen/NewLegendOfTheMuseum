@@ -8,12 +8,22 @@ public class LaserCounter : MonoBehaviour
 
     public GameObject laser;
 
+    public GameObject sun;
+
+
+    private void Start()
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (counter == 4)
         {
             laser.SetActive(true);
+            sun.SetActive(true);
+            
         }
     }
 
