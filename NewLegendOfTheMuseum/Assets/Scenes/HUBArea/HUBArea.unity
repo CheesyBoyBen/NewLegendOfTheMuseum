@@ -258,7 +258,7 @@ MonoBehaviour:
     - The Reality Warper has been using this Portal to keep the Technology and Science
       Artefacts.
     - You should find Telephones, Computers and much more through the portal that
-      you can use throughout your journey!-2.748
+      you can use throughout your journey!
     - If you happen find an MP3 Player could you please bring it back for me... It
       will have my favourite Lady Baa Baa and Ed Shearan songs on it
   ONLYPHONE: {fileID: 0}
@@ -4981,6 +4981,10 @@ PrefabInstance:
     - target: {fileID: 5909517595042860587, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
       propertyPath: m_Name
       value: Audio Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909517595042860591, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
+      propertyPath: m_Volume
+      value: 0.122
       objectReference: {fileID: 0}
     - target: {fileID: 5909517595042860591, guid: 8bc8b8f37b8c02e4f84b0c5b7bec83c9, type: 3}
       propertyPath: m_audioClip
