@@ -23,6 +23,7 @@ public class bounce : MonoBehaviour
     {
         // Store the initial position of the object
         initialPosition = transform.position;
+        
     }
 
     private void Update()
@@ -30,13 +31,14 @@ public class bounce : MonoBehaviour
         // If the object becomes active, start the bounce animation
         if (!isActive && gameObject.activeSelf  && counter == 3  && !oneTime)
         {
+            volt1.planeBuilt = true;
+            volt2.planeBuilt = true;
+            volt3.planeBuilt = true;
 
             isActive = true;
             StartCoroutine(BounceAnimation());
             isActive = false;
-            volt1.planeBuilt = true;
-            volt2.planeBuilt = true;
-            volt3.planeBuilt = true;
+
             oneTime = true;
 
         }

@@ -9,15 +9,22 @@ public class PlanePuzzleBody : MonoBehaviour
     public GameObject tWings;
 
     public bounce b;
+    private bool once = false;
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Body")
         {
-            puo.canpickup = true;
-            Body.SetActive(true);
-            b.Add();
-            Destroy(tWings.gameObject);
-            Destroy(this.gameObject);
+            if (!once)
+            {
+                puo.canpickup = true;
+                Body.SetActive(true);
+                b.Add();
+                Destroy(tWings.gameObject);
+                Destroy(this.gameObject);
+                once = true;
+
+            }
         }
     }
 }

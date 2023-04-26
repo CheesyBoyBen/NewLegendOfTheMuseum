@@ -9,15 +9,21 @@ public class PlanePuzzlePropellor : MonoBehaviour
     public GameObject tWings;
 
     public bounce b;
+    private bool once = false;
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Propellor")
         {
-            puo.canpickup = true;
-            Propellor.SetActive(true);
-            b.Add();
-            Destroy(tWings.gameObject);
-            Destroy(this.gameObject);
+            if (!once)
+            {
+                puo.canpickup = true;
+                Propellor.SetActive(true);
+                b.Add();
+                Destroy(tWings.gameObject);
+                Destroy(this.gameObject);
+                once = true;
+            }
         }
     }
 }

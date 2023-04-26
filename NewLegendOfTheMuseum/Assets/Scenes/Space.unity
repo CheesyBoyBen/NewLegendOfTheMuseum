@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.052087165, g: 0.069961384, b: 0.19818267, a: 1}
+  m_IndirectSpecularColor: {r: 0.051960297, g: 0.06971559, b: 0.19847813, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10739,7 +10739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1133891018}
   satellite: {fileID: 870887899}
-  dist: 5
+  dist: 7
   sun: {fileID: 996395730}
   planet1: {fileID: 473019896}
   planet2: {fileID: 628027289}
