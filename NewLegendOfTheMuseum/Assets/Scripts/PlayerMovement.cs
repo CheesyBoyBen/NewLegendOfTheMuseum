@@ -231,6 +231,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
             curPower = 3;
         }
 
+        /*
         if (Input.GetKeyDown(powerKey))
         {
             if (curPower == 1)
@@ -250,7 +251,7 @@ public class PlayerMovement : MonoBehaviour, Interactable
             }
         }
         pushCooldown -= Time.deltaTime;
-
+        */
 
     }
 
