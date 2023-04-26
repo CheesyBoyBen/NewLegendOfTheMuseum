@@ -10743,7 +10743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1133891018}
   satellite: {fileID: 870887899}
-  dist: 7
+  dist: 5
   sun: {fileID: 996395730}
   planet1: {fileID: 473019896}
   planet2: {fileID: 628027289}
