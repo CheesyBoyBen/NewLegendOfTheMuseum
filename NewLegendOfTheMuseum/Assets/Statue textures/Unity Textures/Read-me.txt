@@ -1,0 +1,1 @@
+Roughness/metalic should have 0 influence they may need to be swapped arround to achive this 
