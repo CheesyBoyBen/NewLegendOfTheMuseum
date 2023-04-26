@@ -9,7 +9,7 @@ public class MenuScript : MonoBehaviour
     public GameObject OptionsScreen;
    public void LoadHub()
     {
-        SceneManager.LoadScene("IntroVideo");
+        SceneManager.LoadScene("HUBArea");
     }
 
     public void EndGame()
