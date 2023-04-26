@@ -15,6 +15,7 @@ public class FaceCamera : MonoBehaviour
     void Update()
     {
         transform.LookAt(player.transform);
+        transform.localEulerAngles += new Vector3(90, 180, 0);
 
     }
 }

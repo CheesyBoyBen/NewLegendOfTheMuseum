@@ -50,6 +50,7 @@ public class Voltage : MonoBehaviour
         Text.text = counter.ToString();
         if (planeBuilt)
         {
+            Debug.Log("test");
             if (Input.GetKeyDown(KeyCode.E) && canAdd == true)
             {
                 counter++;
@@ -107,6 +108,10 @@ public class Voltage : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        canAdd = false;
+        if (other.gameObject.tag == "Player")
+        {
+            canAdd = false;
+
+        }
     }
 }
