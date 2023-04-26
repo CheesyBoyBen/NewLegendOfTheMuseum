@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 230424139}
   - component: {fileID: 230424138}
   m_Layer: 5
-  m_Name: Canvas (3)
+  m_Name: ECanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8377,7 +8377,7 @@ GameObject:
   - component: {fileID: 1202790566}
   - component: {fileID: 1202790565}
   m_Layer: 5
-  m_Name: Canvas (4)
+  m_Name: ECanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11669,7 +11669,7 @@ GameObject:
   - component: {fileID: 1783632746}
   - component: {fileID: 1783632745}
   m_Layer: 5
-  m_Name: Canvas (3)
+  m_Name: ECanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -27,6 +27,14 @@ public class PickUpObject : MonoBehaviour
                 ObjectIwantToPickUp.transform.parent = myHands.transform; //makes the object become a child of the parent so that it moves with the hands
                 ObjectIwantToPickUp.transform.rotation = Quaternion.identity;
                 canpickup = false;
+
+                for (var i = ObjectIwantToPickUp.transform.childCount - 1; i >= 0; i--)
+                {
+                    if (ObjectIwantToPickUp.transform.GetChild(i).gameObject.name == "ECanvas") 
+                    {
+                        Object.Destroy(ObjectIwantToPickUp.transform.GetChild(i).gameObject);
+                    }
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.X) && hasItem == true) // if you have an item and get the key to remove the object, again can be any key
