@@ -1377,6 +1377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pm: {fileID: 653617811}
   artifact: {fileID: 858689550}
+  sceneToLoad: 
 --- !u!65 &1278243880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2538,14 +2539,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5353158666069035674, guid: 39ba1bf59f60e804db36da287af507a1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 086c865371eac5d4f99f1fbdb14fe7a4, type: 2}
     - target: {fileID: 919132149155446097, guid: 39ba1bf59f60e804db36da287af507a1, type: 3}
       propertyPath: m_Name
       value: Artifact
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 39ba1bf59f60e804db36da287af507a1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6372305736496083426, guid: 39ba1bf59f60e804db36da287af507a1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd7f00825891d2541ace337b8a30b2de, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ba1bf59f60e804db36da287af507a1, type: 3}
 --- !u!1 &2095915404
