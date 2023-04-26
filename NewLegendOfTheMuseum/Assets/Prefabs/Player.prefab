@@ -164,12 +164,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c86bb3df2fc7a14ba27fe1f35dd374f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerKey: 101
   dashSpeed: 0
   dashTime: 0
   dashKey: 101
   pushKey: 113
   pushRange: 5
   pushCooldownMax: 3
+  curPower: 0
   maxHealth: 40
   currentHealth: 0
   healthBar: {fileID: 0}
@@ -194,6 +196,10 @@ MonoBehaviour:
   knockbackTime: 0
   attackAudio: {fileID: 8300000, guid: 0b93f9af63befa2478916a5396131fff, type: 3}
   audioManager: {fileID: 0}
+  anim: {fileID: 0}
+  mesh: {fileID: 0}
+  spawn: {x: 0, y: 0, z: 0}
+  artifactCheck: 0
 --- !u!136 &8346684268499307305
 CapsuleCollider:
   m_ObjectHideFlags: 0
