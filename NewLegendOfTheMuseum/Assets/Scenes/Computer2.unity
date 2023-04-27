@@ -5348,14 +5348,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658543602}
-  m_LocalRotation: {x: -0, y: -0.47968495, z: -0, w: 0.8774408}
-  m_LocalPosition: {x: -717.89, y: 36.2, z: 342.25}
+  m_LocalRotation: {x: 0.09361448, y: -0.6900818, z: 0.09647085, w: 0.7111377}
+  m_LocalPosition: {x: -718.46, y: 37.5, z: 347.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 45
-  m_LocalEulerAnglesHint: {x: 0, y: -57.33, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.444, y: -88.214, z: 0.476}
 --- !u!1 &675730178
 GameObject:
   m_ObjectHideFlags: 0
@@ -14672,7 +14672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988210233}
   m_LocalRotation: {x: -0, y: 0.70772654, z: -0, w: 0.7064866}
-  m_LocalPosition: {x: -727.54, y: 31.34, z: 346.63}
+  m_LocalPosition: {x: -727.54, y: 31.34, z: 348.42}
   m_LocalScale: {x: 2.3328383, y: 2.4496, z: 4.2356906}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14696,9 +14696,11 @@ MonoBehaviour:
     - 'Looks like we''re in the communications gallery!  '
     - So many goodies... although, there's this weird poster...
     - I can't figure out what the dots mean... What do you think?
+    - Apparently its related to the Super Computer in some way... Maybe its a code...?
+    - I'm not sure, thats just what I over-herd from the minion.
   ONLYPHONE: {fileID: 0}
-  targetPos: {x: -717.8, y: 33.45, z: 342.2}
-  targetRot: {x: 0, y: -57.3, z: 0}
+  targetPos: {x: -718.46, y: 37.5, z: 347.76}
+  targetRot: {x: 15.444, y: -88.214, z: 0.476}
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
