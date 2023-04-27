@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2192134, g: 0.09352004, b: 0.49801123, a: 1}
+  m_IndirectSpecularColor: {r: 0.21921432, g: 0.09351965, b: 0.498011, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2068,7 +2068,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187345533}
   m_LocalRotation: {x: -0, y: -0.7064859, z: -0, w: 0.70772713}
-  m_LocalPosition: {x: -711.76, y: 31.1367, z: 358.97}
+  m_LocalPosition: {x: -710.47, y: 31.1367, z: 358.97}
   m_LocalScale: {x: 12.449748, y: 6.3205557, z: 12.155039}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2135,8 +2135,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.44
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.51
+  m_Center: {x: 0, y: 0, z: -0.16}
 --- !u!1001 &187462069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2590,7 +2590,7 @@ MonoBehaviour:
     - 'Wish I brought my ''Best of 80''s rock'' and David Hasselhoof cassette '
   ONLYPHONE: {fileID: 0}
   targetPos: {x: -715, y: 36.2, z: 368.2}
-  targetRot: {x: 10, y: -90.748, z: 0}
+  targetRot: {x: 0, y: -42.33, z: 0}
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
@@ -2647,7 +2647,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.06, y: 0, z: 0}
 --- !u!1 &290611884
 GameObject:
   m_ObjectHideFlags: 0
@@ -8941,7 +8941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93ad6a8e1c6e79c4694bdfe4c40a6c6b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.51
+      value: 36.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93ad6a8e1c6e79c4694bdfe4c40a6c6b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10419,7 +10419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4192814574690622, guid: 7e569f6542324b042846eedd0b1239e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712.22
+      value: -710.98
       objectReference: {fileID: 0}
     - target: {fileID: 4192814574690622, guid: 7e569f6542324b042846eedd0b1239e3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10909,7 +10909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422637479}
   m_LocalRotation: {x: -0, y: 0.00087721646, z: -0, w: 0.9999997}
-  m_LocalPosition: {x: -707.05, y: 32.02, z: 375.96}
+  m_LocalPosition: {x: -706.68, y: 32.02, z: 375.96}
   m_LocalScale: {x: 15.144064, y: 4.22507, z: 4.9243174}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11776,7 +11776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c81a748786fe5344bd75d0b5a0dd250, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712.07
+      value: -710.83
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c81a748786fe5344bd75d0b5a0dd250, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11866,7 +11866,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.9671287, b: 0.4764151, a: 1}
   m_Intensity: 2.56
-  m_Range: 10
+  m_Range: 7.6123924
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -11923,7 +11923,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542309237}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -708.87, y: 36.98, z: 358.22}
+  m_LocalPosition: {x: -707.63, y: 36.98, z: 358.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13008,7 +13008,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688004955}
   m_LocalRotation: {x: -0, y: 0.0000004768371, z: -0, w: 1}
-  m_LocalPosition: {x: -710.04, y: 32.04, z: 358.3}
+  m_LocalPosition: {x: -710.44, y: 32.04, z: 358.3}
   m_LocalScale: {x: 2.4134047, y: 3.30839, z: 4.8128366}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14947,8 +14947,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.17
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.5491098
+  m_Center: {x: 0.76974, y: 0, z: -0.19695173}
 --- !u!4 &1991619828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eec136ae79c05ce4691be0ca5a3b1a2f, type: 3}
@@ -15427,7 +15427,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3413221, y: 1.7368304, z: 2.5746107}
+  m_Size: {x: 1.31, y: 1.7368304, z: 2.33}
   m_Center: {x: 0.037187483, y: 0.36841512, z: 0.5444632}
 --- !u!33 &2045127866
 MeshFilter:
@@ -15445,7 +15445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045127862}
   m_LocalRotation: {x: -0, y: -0.70648646, z: -0, w: 0.70772654}
-  m_LocalPosition: {x: -724.18, y: 31.04, z: 361.7}
+  m_LocalPosition: {x: -722.94, y: 31.04, z: 361.7}
   m_LocalScale: {x: 11.292137, y: 2.4496, z: 2.855008}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15817,7 +15817,7 @@ MonoBehaviour:
   player: {fileID: 2089370664}
   playerCamera: {fileID: 1355856182}
   image: {fileID: 796693616}
-  minDist: 7.99
+  minDist: 6.94
   speed: 5
 --- !u!114 &2116121787
 MonoBehaviour:
