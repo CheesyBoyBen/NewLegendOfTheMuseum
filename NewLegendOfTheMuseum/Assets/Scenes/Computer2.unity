@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 81137e86928f3e949b587f6d7bf8b9ca, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: fdeac00e9073a75438bd1fee4dd82b60, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.051960297, g: 0.06971559, b: 0.19847813, a: 1}
+  m_IndirectSpecularColor: {r: 0.2192134, g: 0.09352004, b: 0.49801123, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2590,7 +2590,7 @@ MonoBehaviour:
     - 'Wish I brought my ''Best of 80''s rock'' and David Hasselhoof cassette '
   ONLYPHONE: {fileID: 0}
   targetPos: {x: -715, y: 36.2, z: 368.2}
-  targetRot: {x: 10, y: -42.4, z: 0}
+  targetRot: {x: 10, y: -90.748, z: 0}
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
@@ -5000,7 +5000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5616481131523840475, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -724.95
+      value: -721.7254
       objectReference: {fileID: 0}
     - target: {fileID: 5616481131523840475, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5008,11 +5008,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5616481131523840475, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 342.21002
+      value: 343.31372
       objectReference: {fileID: 0}
     - target: {fileID: 5616481131523840475, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.87355864
+      value: 0.9107378
       objectReference: {fileID: 0}
     - target: {fileID: 5616481131523840475, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5020,7 +5020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5616481131523840475, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.48671895
+      value: 0.41298524
       objectReference: {fileID: 0}
     - target: {fileID: 5616481131523840475, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5032,7 +5032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5616481131523840475, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 58.25
+      value: 48.785
       objectReference: {fileID: 0}
     - target: {fileID: 5616481131523840475, guid: 8f6795c671da15549bc324462283f2ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5226,7 +5226,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 92
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -5251,14 +5251,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658543602}
-  m_LocalRotation: {x: 0.045978162, y: -0.70699805, z: 0.039139662, w: 0.7046332}
-  m_LocalPosition: {x: -720.12, y: 34.15, z: 347.93}
+  m_LocalRotation: {x: 0.10061797, y: -0.70438653, z: 0.09326477, w: 0.6964319}
+  m_LocalPosition: {x: -722.44, y: 34.67, z: 348.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 45
-  m_LocalEulerAnglesHint: {x: 6.9, y: -90.226, z: -0.569}
+  m_LocalEulerAnglesHint: {x: 15.756, y: -90.748, z: -0.705}
 --- !u!1 &675730178
 GameObject:
   m_ObjectHideFlags: 0
@@ -13791,8 +13791,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2868652, y: 4.730522, z: 8.558594}
-  m_Center: {x: 0.6434326, y: -4.2699947, z: 7.64151}
+  m_Size: {x: 6.5115356, y: 5.6415462, z: 8.363525}
+  m_Center: {x: 2.7557678, y: -3.8144827, z: 7.543976}
 --- !u!4 &1880953331
 Transform:
   m_ObjectHideFlags: 0
@@ -14297,7 +14297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988210233}
   m_LocalRotation: {x: -0, y: 0.70772654, z: -0, w: 0.7064866}
-  m_LocalPosition: {x: -727.54, y: 31.34, z: 348.32}
+  m_LocalPosition: {x: -725.7, y: 32.9, z: 348.32}
   m_LocalScale: {x: 2.3328383, y: 2.4496, z: 4.2356906}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14324,8 +14324,8 @@ MonoBehaviour:
     - Apparently its related to the Super Computer in some way... Maybe its a code...?
     - I'm not sure, thats just what I over-herd from the minion.
   ONLYPHONE: {fileID: 0}
-  targetPos: {x: -720.12, y: 34.15, z: 347.93}
-  targetRot: {x: 6.9, y: -90.226, z: -0.569}
+  targetPos: {x: -720.63, y: 35, z: 348.42}
+  targetRot: {x: 15.756, y: -90.567, z: -0.705}
   cam: {fileID: 1355856182}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0

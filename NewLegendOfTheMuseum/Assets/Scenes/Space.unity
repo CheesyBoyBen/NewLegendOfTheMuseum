@@ -3570,23 +3570,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4669084170648960, guid: 2b0d7f8f779c4ed4b96621647861c04c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7071
+      value: 2.808521
       objectReference: {fileID: 0}
     - target: {fileID: 4669084170648960, guid: 2b0d7f8f779c4ed4b96621647861c04c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1380668
+      value: 1.8723475
       objectReference: {fileID: 0}
     - target: {fileID: 4669084170648960, guid: 2b0d7f8f779c4ed4b96621647861c04c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.7071
+      value: 2.808521
       objectReference: {fileID: 0}
     - target: {fileID: 4669084170648960, guid: 2b0d7f8f779c4ed4b96621647861c04c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.91
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4669084170648960, guid: 2b0d7f8f779c4ed4b96621647861c04c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1666667
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 4669084170648960, guid: 2b0d7f8f779c4ed4b96621647861c04c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14085,8 +14085,8 @@ MonoBehaviour:
       it!
     - 'Anyway... The Reality Warper seems to have destroyed and scattered the parts
       for the satellite behind me.  '
-    - If you can help us put it back together, I think we can use it to reach the
-      medallion in this area!
+    - If you can help us put it back together by collecting 4 pieces near by, I think
+      we can use it to reach the medallion in this area!
     - 'Once we obtain the medallion here, We will be one step closer to stopping
       the Reality Warper from trying to wool the world! '
   ONLYPHONE: {fileID: 0}
