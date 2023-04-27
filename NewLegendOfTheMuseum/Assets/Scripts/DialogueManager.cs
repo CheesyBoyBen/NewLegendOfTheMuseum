@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
 
     private NPCController activeInstance;
 
+
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
 
@@ -19,7 +20,6 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-
         Instance = this;
     }
 
@@ -42,9 +42,9 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && !isTyping)
         {
-            
+
             ++currentLine;
-            if(currentLine < dialog.Lines.Count)
+            if (currentLine < dialog.Lines.Count)
             {
                 StartCoroutine(TypeDialog(dialog.Lines[currentLine]));
             }
@@ -67,12 +67,7 @@ public class DialogueManager : MonoBehaviour
         {
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
-            if (Input.GetKey(KeyCode.Space))
-            {
-                dialogText.text = line;
-                break;
-                
-            }
+
         }
         isTyping = false;
     }
