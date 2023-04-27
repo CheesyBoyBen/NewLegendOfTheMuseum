@@ -35,7 +35,7 @@ public class OutroComic : MonoBehaviour
         {            
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -51,7 +51,7 @@ public class OutroComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -68,7 +68,7 @@ public class OutroComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -85,7 +85,7 @@ public class OutroComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -102,7 +102,7 @@ public class OutroComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -119,7 +119,7 @@ public class OutroComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -136,7 +136,7 @@ public class OutroComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -153,7 +153,7 @@ public class OutroComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
