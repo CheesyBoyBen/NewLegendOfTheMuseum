@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class credits : MonoBehaviour
 {
+
+    public GameObject image;
     // Start is called before the first frame update
     void Start()
     {
+
+        image.SetActive(true);
         StartCoroutine(scene());
     }
 
@@ -19,8 +23,28 @@ public class credits : MonoBehaviour
 
     IEnumerator scene()
     {
-        
-        yield return new WaitForSeconds(10f);
+
+        for (int i = 100; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                break;
+            }
+        }
+
+        image.SetActive(false);
+
+        for (int i = 100; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                break;
+            }
+        }
 
 
         SceneManager.LoadScene("Menu");

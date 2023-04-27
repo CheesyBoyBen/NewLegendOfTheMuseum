@@ -33,22 +33,6 @@ public class OutroComic : MonoBehaviour
 
     IEnumerator cut1()
     {
-        TMP.text = "Lorem Ipsum";
-        for (int i = 30; i >= 0; i--)
-        {            
-            yield return new WaitForSeconds(0.1f);
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                break;
-            }
-        }
-        TMP.text = "";
-        StartCoroutine(cut2());
-    }
-
-    IEnumerator cut2()
-    {
         panel1.SetActive(true);
         for (int i = 30; i >= 0; i--)
         {
@@ -60,14 +44,30 @@ public class OutroComic : MonoBehaviour
             }
         }
         panel1.SetActive(false);
+        StartCoroutine(cut2());
+    }
+
+    IEnumerator cut2()
+    {
+        panel2.SetActive(true);
+        for (int i = 30; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                break;
+            }
+        }
+        panel2.SetActive(false);
 
         StartCoroutine(cut3());
     }
 
     IEnumerator cut3()
     {
-        TMP.text = "Lorem Ipsum";
-        for (int i = 20; i >= 0; i--)
+        TMP.text = "Reality is Being Restored!";
+        for (int i = 30; i >= 0; i--)
         {
             yield return new WaitForSeconds(0.1f);
 
@@ -83,8 +83,8 @@ public class OutroComic : MonoBehaviour
 
     IEnumerator cut4()
     {
-        panel2.SetActive(true);
-        for (int i = 20; i >= 0; i--)
+        panel3.SetActive(true);
+        for (int i = 30; i >= 0; i--)
         {
             yield return new WaitForSeconds(0.1f);
 
@@ -93,14 +93,31 @@ public class OutroComic : MonoBehaviour
                 break;
             }
         }
-        panel2.SetActive(false);
+        panel3.SetActive(false);
 
         StartCoroutine(cut5());
     }
 
     IEnumerator cut5()
     {
-        TMP.text = "Lorem Ipsum";
+        panel4.SetActive(true);
+        for (int i = 30; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                break;
+            }
+        }
+        panel4.SetActive(false);
+
+        StartCoroutine(cut6());
+    }
+
+    IEnumerator cut6()
+    {
+        TMP.text = "Dolly has Now Become...";
         for (int i = 20; i >= 0; i--)
         {
             yield return new WaitForSeconds(0.1f);
@@ -112,47 +129,13 @@ public class OutroComic : MonoBehaviour
         }
         TMP.text = "";
 
-        StartCoroutine(cut6());
-    }
-
-    IEnumerator cut6()
-    {
-        panel3.SetActive(true);
-        for (int i = 20; i >= 0; i--)
-        {
-            yield return new WaitForSeconds(0.1f);
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                break;
-            }
-        }
-        panel3.SetActive(false);
-
         StartCoroutine(cut7());
     }
 
     IEnumerator cut7()
     {
-        panel4.SetActive(true);
-        for (int i = 20; i >= 0; i--)
-        {
-            yield return new WaitForSeconds(0.1f);
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                break;
-            }
-        }
-        panel4.SetActive(false);
-
-        StartCoroutine(cut8());
-    }
-
-    IEnumerator cut8()
-    {
-        TMP.text = "Lorem Ipsum";
-        for (int i = 60; i >= 0; i--)
+        TMP.text = "The Legend of the Museum!";
+        for (int i = 40; i >= 0; i--)
         {
             yield return new WaitForSeconds(0.1f);
 
@@ -165,6 +148,8 @@ public class OutroComic : MonoBehaviour
 
         scene();
     }
+
+
 
     void scene()
     {
