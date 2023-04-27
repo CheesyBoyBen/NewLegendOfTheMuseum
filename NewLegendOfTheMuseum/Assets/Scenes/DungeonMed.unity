@@ -1474,7 +1474,6 @@ MonoBehaviour:
   tempNOTOUCH2: 0
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!65 &701361921
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1488,8 +1487,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4279294, y: 1.2973608, z: 1.2109232}
   m_Center: {x: 0.12204443, y: 0.14867964, z: -0.087447}
-=======
->>>>>>> Stashed changes
 --- !u!4 &701361922
 Transform:
   m_ObjectHideFlags: 0
@@ -4332,12 +4329,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1312849641718884, guid: 639ac7944bb681a42b4c77d9e38087af, type: 3}
   m_PrefabInstance: {fileID: 942076732}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 --- !u!114 &1702337385
-=======
---- !u!114 &1702337381
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4351,8 +4343,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 653617807}
   tempNOTOUCH: 0
-=======
->>>>>>> parent of 78e41fc (interact distance fix)
 --- !u!1 &1738674072
 GameObject:
   m_ObjectHideFlags: 0
