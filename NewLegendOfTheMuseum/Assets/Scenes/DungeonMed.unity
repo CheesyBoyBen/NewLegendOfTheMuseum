@@ -573,8 +573,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.8443973
-  m_Center: {x: -0.44548178, y: 0, z: 1.2169476}
+  m_Radius: 3.4221835
+  m_Center: {x: -0.44548127, y: -0.06667709, z: 0.5724855}
 --- !u!114 &212157836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,7 +763,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359173488}
   m_LocalRotation: {x: -0.010609648, y: 0.58463246, z: -0.0016356609, w: 0.8112273}
-  m_LocalPosition: {x: 14.449999, y: 1.7499999, z: -164.7}
+  m_LocalPosition: {x: 14.449999, y: 1.49, z: -164.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1445,8 +1445,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 701361922}
-  - component: {fileID: 701361921}
   - component: {fileID: 701361920}
+  - component: {fileID: 701361923}
   m_Layer: 9
   m_Name: NPC (8)
   m_TagString: Untagged
@@ -1479,6 +1479,7 @@ MonoBehaviour:
   tempNOTOUCH2: 0
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!65 &701361921
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1492,6 +1493,8 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.79, y: 1.2973608, z: 2.75}
   m_Center: {x: 0.12204443, y: 0.14867964, z: -0.087447}
+=======
+>>>>>>> Stashed changes
 --- !u!4 &701361922
 Transform:
   m_ObjectHideFlags: 0
@@ -1509,6 +1512,19 @@ Transform:
   m_Father: {fileID: 565942090}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -40.663, z: 0}
+--- !u!135 &701361923
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701361919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0.0000000030038492, y: 0.2985221, z: -0.06805012}
 --- !u!1001 &772783298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2450,7 +2466,7 @@ MonoBehaviour:
   player: {fileID: 653617807}
   playerCamera: {fileID: 1702337380}
   image: {fileID: 1351650565}
-  minDist: 8.33
+  minDist: 7.24
   speed: 5
 --- !u!114 &1098732134
 MonoBehaviour:
@@ -3761,7 +3777,7 @@ MonoBehaviour:
   player: {fileID: 653617807}
   playerCamera: {fileID: 1702337380}
   image: {fileID: 1322046185}
-  minDist: 9.5
+  minDist: 11.24
   speed: 5
 --- !u!114 &1406583254
 MonoBehaviour:
@@ -3939,8 +3955,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1543030817}
-  - component: {fileID: 1543030816}
   - component: {fileID: 1543030815}
+  - component: {fileID: 1543030818}
   m_Layer: 9
   m_Name: NPC (9)
   m_TagString: Untagged
@@ -3972,19 +3988,6 @@ MonoBehaviour:
   tempNOTOUCH2: 0
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
---- !u!65 &1543030816
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543030814}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.80691373, y: 1.2973608, z: 0.67027855}
-  m_Center: {x: 0.07741657, y: 0.14867964, z: -0.07755828}
 --- !u!4 &1543030817
 Transform:
   m_ObjectHideFlags: 0
@@ -4002,6 +4005,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: -40.663, z: 0}
+--- !u!135 &1543030818
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543030814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.1154531
+  m_Center: {x: 0, y: 0.6154536, z: 0}
 --- !u!4 &1553400805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 001fc1a6192b1da4d91f5df695f8f414, type: 3}
@@ -4262,29 +4278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c2d45330a7b1894ca1aacb0ebd30599, type: 3}
---- !u!1 &1671394918 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5283181739169508977, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
-  m_PrefabInstance: {fileID: 434115882}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1671394919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5810360607649963184, guid: 209ec289938a8644bb746776b73f17b4, type: 3}
   m_PrefabInstance: {fileID: 434115882}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1671394920
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671394918}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.2753613, y: 3.0328445, z: 2.5309782}
-  m_Center: {x: 0.042307254, y: 1.0164223, z: 0.11819533}
 --- !u!1001 &1689665197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4363,7 +4361,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1312849641718884, guid: 639ac7944bb681a42b4c77d9e38087af, type: 3}
   m_PrefabInstance: {fileID: 942076732}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!114 &1702337385
+=======
+--- !u!114 &1702337381
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
