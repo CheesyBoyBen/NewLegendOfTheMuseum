@@ -60,7 +60,7 @@ public class NPCController: MonoBehaviour, Interactable
     }
     public void Interact()
     {
-        if ((tempNOTOUCH == false) && (inRadius))
+        if (tempNOTOUCH == false)
         {
             StartCoroutine(DialogueManager.Instance.ShowDialogue(dialog, this.GetComponent<NPCController>()));
             tempNOTOUCH = true;

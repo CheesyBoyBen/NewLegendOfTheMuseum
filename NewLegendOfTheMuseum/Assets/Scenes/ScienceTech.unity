@@ -14482,7 +14482,7 @@ MonoBehaviour:
     m_Bits: 512
   attackDamage: 1
   attackRate: 4
-  interactRange: 5.1
+  interactRange: 3
   knockbackForce: 0.1
   knockbackTime: 0
   attackAudio: {fileID: 8300000, guid: a37f44cbf8c2a7443a3c361efa2f233a, type: 3}
