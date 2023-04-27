@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.21921432, g: 0.09351965, b: 0.498011, a: 1}
+  m_IndirectSpecularColor: {r: 0.2192134, g: 0.09352004, b: 0.49801123, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8429,7 +8429,7 @@ PrefabInstance:
       objectReference: {fileID: 2089370664}
     - target: {fileID: 5237180801610516030, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: minDist
-      value: 11.66
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5237180801610516030, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: playerCamera
@@ -8493,11 +8493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714519506240432585, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.7
+      value: -10.32
       objectReference: {fileID: 0}
     - target: {fileID: 6714519506240432585, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99144495
+      value: 0.38268405
       objectReference: {fileID: 0}
     - target: {fileID: 6714519506240432585, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: m_LocalRotation.x
@@ -8505,7 +8505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714519506240432585, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.13052575
+      value: 0.92387927
       objectReference: {fileID: 0}
     - target: {fileID: 6714519506240432585, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: m_LocalRotation.z
@@ -8513,7 +8513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714519506240432585, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -18.93
+      value: -17.55
       objectReference: {fileID: 0}
     - target: {fileID: 6714519506240432585, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8525,7 +8525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714519506240432585, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 15
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 6714519506240432585, guid: 5b7e749347cfa4c4184d3c070ae6f720, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10931,7 +10931,7 @@ MonoBehaviour:
   dialog:
     lines:
     - Ah the good ol' days with Nokias and office phones
-    - No selfie cameras?!??!
+    - Baaaaa-humbug!!!!! No selfie cameras?!??!
   ONLYPHONE: {fileID: 0}
   targetPos: {x: -714.8, y: 36.2, z: 367}
   targetRot: {x: 10, y: 32.6, z: 0}
