@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.21921432, g: 0.09351965, b: 0.498011, a: 1}
+  m_IndirectSpecularColor: {r: 0.2192134, g: 0.09352004, b: 0.49801123, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5543,7 +5543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7032807732259881401, guid: 0d7aa5013a6a3e146b5ba8842769679a, type: 3}
       propertyPath: sceneName
-      value: HUBArea
+      value: DungeonMed
       objectReference: {fileID: 0}
     - target: {fileID: 7033537467686729233, guid: 0d7aa5013a6a3e146b5ba8842769679a, type: 3}
       propertyPath: m_IsActive
