@@ -42,6 +42,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && !isTyping)
         {
+            
             ++currentLine;
             if(currentLine < dialog.Lines.Count)
             {
@@ -66,6 +67,12 @@ public class DialogueManager : MonoBehaviour
         {
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
+            if (Input.GetKey(KeyCode.Space))
+            {
+                dialogText.text = line;
+                break;
+                
+            }
         }
         isTyping = false;
     }

@@ -25,7 +25,10 @@ public class introComic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            scene();
+        }
     }
 
     IEnumerator cut1()
@@ -35,7 +38,7 @@ public class introComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -52,7 +55,7 @@ public class introComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -69,7 +72,7 @@ public class introComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -86,7 +89,7 @@ public class introComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -103,7 +106,7 @@ public class introComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -120,7 +123,7 @@ public class introComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -137,7 +140,7 @@ public class introComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
@@ -154,7 +157,7 @@ public class introComic : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 break;
             }
