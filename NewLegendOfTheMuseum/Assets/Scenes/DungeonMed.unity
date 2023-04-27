@@ -1470,7 +1470,7 @@ MonoBehaviour:
   ONLYPHONE: {fileID: 0}
   targetPos: {x: 10.02, y: 1.75, z: -160.37}
   targetRot: {x: 10.468, y: -61.302, z: -1.398}
-  cam: {fileID: 0}
+  cam: {fileID: 1702337380}
   tempNOTOUCH: 0
   tempNOTOUCH2: 0
   audioSource: {fileID: 0}

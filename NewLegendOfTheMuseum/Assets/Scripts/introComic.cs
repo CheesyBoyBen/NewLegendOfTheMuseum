@@ -31,7 +31,15 @@ public class introComic : MonoBehaviour
     IEnumerator cut1()
     {
         TMP.text = "On a nice, busy day at the National Museums Scotland in Edinburgh";
-        yield return new WaitForSeconds(3f);
+        for (int i = 30; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                break;
+            }
+        }
         TMP.text = "";
 
         StartCoroutine(cut2());
@@ -40,7 +48,15 @@ public class introComic : MonoBehaviour
     IEnumerator cut2()
     {
         panel1.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        for (int i = 30; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                break;
+            }
+        }
         panel1.SetActive(false);
 
         StartCoroutine(cut3());
@@ -49,7 +65,15 @@ public class introComic : MonoBehaviour
     IEnumerator cut3()
     {
         TMP.text = "Dolly spots a new mysterious artefact added to the collection";
-        yield return new WaitForSeconds(2f);
+        for (int i = 20; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                break;
+            }
+        }
         TMP.text = "";
 
         StartCoroutine(cut4());
@@ -58,7 +82,15 @@ public class introComic : MonoBehaviour
     IEnumerator cut4()
     {
         panel2.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        for (int i = 20; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                break;
+            }
+        }
         panel2.SetActive(false);
 
         StartCoroutine(cut5());
@@ -67,7 +99,15 @@ public class introComic : MonoBehaviour
     IEnumerator cut5()
     {
         TMP.text = "The museum would never be the same";
-        yield return new WaitForSeconds(2f);
+        for (int i = 20; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                break;
+            }
+        }
         TMP.text = "";
 
         StartCoroutine(cut6());
@@ -76,7 +116,15 @@ public class introComic : MonoBehaviour
     IEnumerator cut6()
     {
         panel3.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        for (int i = 20; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                break;
+            }
+        }
         panel3.SetActive(false);
 
         StartCoroutine(cut7());
@@ -85,7 +133,15 @@ public class introComic : MonoBehaviour
     IEnumerator cut7()
     {
         panel4.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        for (int i = 20; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                break;
+            }
+        }
         panel4.SetActive(false);
 
         StartCoroutine(cut8());
@@ -94,7 +150,15 @@ public class introComic : MonoBehaviour
     IEnumerator cut8()
     {
         TMP.text = "Dolly's journey awaits";
-        yield return new WaitForSeconds(6f);
+        for (int i = 60; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                break;
+            }
+        }
         TMP.text = "";
 
         scene();
